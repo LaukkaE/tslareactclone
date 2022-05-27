@@ -1,0 +1,17 @@
+.navbar {
+    position: fixed;
+    z-index: 11;
+    display: flex;
+    justify-content: space-between;
+    height: 3rem;
+    width: 95%;
+    align-items: center;
+    gap: 2rem;
+    padding: 0 1rem;
+    font-size: 0.8rem;
+}
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+}
