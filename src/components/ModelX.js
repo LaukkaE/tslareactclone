@@ -1,10 +1,11 @@
 import React from 'react';
 import background from '../pics/mx-homepage-desktop.jpg';
+import './css/background.css';
 
 const ModelX = () => {
     return (
         <div
-            className="background"
+            className="background modelx"
             style={{ backgroundImage: `url(${background})` }}
         >
             ModelX

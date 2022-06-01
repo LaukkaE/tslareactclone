@@ -6,7 +6,7 @@ const ModelY = () => {
     return (
         <div
             style={{ backgroundImage: `url(${background})` }}
-            className="background"
+            className="background modely"
         ></div>
     );
 };

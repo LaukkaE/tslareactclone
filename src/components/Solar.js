@@ -4,7 +4,7 @@ import background from '../pics/Desktop-SolarPanels.jpg';
 const Solar = () => {
     return (
         <div
-            className="background"
+            className="background solar"
             style={{ backgroundImage: `url(${background})` }}
         >
             Solar

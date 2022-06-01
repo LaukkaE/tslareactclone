@@ -1,10 +1,11 @@
 import React from 'react';
 import background from '../pics/ms-homepage-desktop.jpg';
+import './css/background.css';
 
 const ModelS = () => {
     return (
         <div
-            className="background"
+            className="background models"
             style={{ backgroundImage: `url(${background})` }}
         >
             ModelS
