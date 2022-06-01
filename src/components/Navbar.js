@@ -1,42 +1,64 @@
 import React from 'react';
 import './css/Navbar.css';
+import teslaLogo from '../pics/teslalogo.svg';
+import { Link, BrowserRouter as Router } from 'react-router-dom';
 
 const Navbar = () => {
     return (
         <div className="navbar">
-            <div className="logo">logo</div>
-            <div className="car_links">
-                <ul>
-                    <li>
-                        <p>Model S</p>
-                    </li>
-                    <li>
-                        <p>Model 3</p>
-                    </li>
-                    <li>
-                        <p>Model X</p>
-                    </li>
-                    <li>
-                        <p>Model Y</p>
-                    </li>
-                    <li>
-                        <p>Charging</p>
-                    </li>
-                </ul>
-            </div>
-            <div className="support_links">
-                <ul>
-                    <li>
-                        <p>Support</p>
-                    </li>
-                    <li>
-                        <p>Account</p>
-                    </li>
-                    <li>
-                        <p>Menu</p>
-                    </li>
-                </ul>
-            </div>
+            <Router>
+                <div className="logo">
+                    <Link to="/">
+                        <img src={teslaLogo} alt="Tesla" />
+                    </Link>
+                </div>
+                <div className="car_links">
+                    <ul>
+                        <li>
+                            <Link to="/models">
+                                <p>Model S</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/model3">
+                                <p>Model 3</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/modelx">
+                                <p>Model X</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/modely">
+                                <p>Model Y</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/charging">
+                                <p>Charging</p>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className="support_links">
+                    <ul>
+                        <li>
+                            <Link to="/support">
+                                <p>Support</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="/account">
+                                <p>Account</p>
+                            </Link>
+                        </li>
+                        <li>
+                            <p>Menu</p>
+                        </li>
+                    </ul>
+                </div>
+            </Router>
         </div>
     );
 };

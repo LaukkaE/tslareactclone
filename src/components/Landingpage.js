@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useRef, useState } from 'react';
 
 import {
     Element,
@@ -14,12 +14,14 @@ import Solar from './Solar';
 
 const Landingpage = () => {
     const scrollDir = useScrollDirection();
+    const [activeElement, setActiveElement] = useState('modely');
 
     const executeScroll = () => {
-        console.log('execute');
+        // console.log('execute');
         let offsetY = window.scrollY;
         if (scrollDir === 'up' && offsetY < window.innerHeight) {
             scroller.scrollTo('modelyElement', { smooth: true });
+            setActiveElement('modely');
         } else if (
             (scrollDir === 'down' && offsetY <= window.innerHeight) ||
             (scrollDir === 'up' &&
@@ -27,6 +29,7 @@ const Landingpage = () => {
                 offsetY <= window.innerHeight * 2)
         ) {
             scroller.scrollTo('model3Element', { smooth: true });
+            setActiveElement('model3');
         } else if (
             (scrollDir === 'down' && offsetY <= window.innerHeight * 2) ||
             (scrollDir === 'up' &&
@@ -34,6 +37,7 @@ const Landingpage = () => {
                 offsetY <= window.innerHeight * 3)
         ) {
             scroller.scrollTo('modelsElement', { smooth: true });
+            setActiveElement('models');
         } else if (
             (scrollDir === 'down' && offsetY <= window.innerHeight * 3) ||
             (scrollDir === 'up' &&
@@ -41,39 +45,47 @@ const Landingpage = () => {
                 offsetY <= window.innerHeight * 4)
         ) {
             scroller.scrollTo('modelxElement', { smooth: true });
+            setActiveElement('modelx');
         } else if (scrollDir === 'down' && offsetY >= window.innerHeight * 3) {
             scroller.scrollTo('solarElement', { smooth: true });
+            setActiveElement('solar');
         } else {
             console.log('foo');
         }
-        console.log(scrollDir, offsetY, window.innerHeight);
+        // console.log(scrollDir, offsetY, window.innerHeight);
     };
 
     let timeout = useRef(null);
     const handleScroll = () => {
-        console.log(scrollDir);
         clearTimeout(timeout.current);
         timeout.current = setTimeout(() => {
             executeScroll();
         }, 600);
     };
+    // const asd = () => {
+    //     console.log(activeElement);
+    // };
 
     return (
-        <div className="landing" onWheel={(e) => handleScroll(e)}>
+        <div
+            className="landing"
+            // onClick={() => asd()}
+            onWheel={(e) => handleScroll(e)}
+        >
             <Element name="modelyElement">
-                <ModelY />
+                <ModelY active={activeElement === 'modely' ? true : false} />
             </Element>
             <Element name="model3Element">
-                <Model3 />
+                <Model3 active={activeElement === 'model3' ? true : false} />
             </Element>
             <Element name="modelsElement">
-                <ModelS />
+                <ModelS active={activeElement} />
             </Element>
             <Element name="modelxElement">
-                <ModelX />
+                <ModelX active={activeElement} />
             </Element>
             <Element name="solarElement">
-                <Solar />
+                <Solar active={activeElement === 'solar' ? true : false} />
             </Element>
         </div>
     );

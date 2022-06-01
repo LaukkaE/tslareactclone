@@ -2,7 +2,7 @@ import React from 'react';
 import background from '../pics/ms-homepage-desktop.jpg';
 import './css/background.css';
 
-const ModelS = () => {
+const ModelS = ({ active }) => {
     return (
         <div
             className="background models"

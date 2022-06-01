@@ -2,7 +2,7 @@ import React from 'react';
 import background from '../pics/mx-homepage-desktop.jpg';
 import './css/background.css';
 
-const ModelX = () => {
+const ModelX = ({ activeElement }) => {
     return (
         <div
             className="background modelx"

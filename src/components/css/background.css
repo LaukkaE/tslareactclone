@@ -7,6 +7,30 @@
     height: 100vh;
 }
 
+.active {
+    display: flex;
+    flex-direction: column;
+    /* text-align: center; */
+    justify-content: space-between;
+    align-items: center;
+    max-width: 300px;
+    margin: auto;
+    height: 100%;
+}
+
+.intro_text {
+    padding-top: 10rem;
+    margin: 0 auto;
+}
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    width: 100%;
+    bottom: 8vh;
+}
+
 @media only screen and (max-width: 600px) {
     .model3 {
         background-image: url('../../pics/Mobile-model_3.jpg') !important;
