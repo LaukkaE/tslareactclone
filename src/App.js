@@ -1,7 +1,7 @@
-import './App.css';
+import './components/css/App.css';
 
 import Navbar from './components/Navbar';
-import Landingpage from './components/Landingpage';
+import Landingpage from './components/LandingPage';
 
 function App() {
     return (

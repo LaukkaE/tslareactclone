@@ -1,5 +1,7 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import background from '../pics/Desktop-SolarPanels.jpg';
+import MainPageActiveElement from './MainPageActiveElement';
 
 const Solar = ({ active }) => {
     return (
@@ -9,14 +11,16 @@ const Solar = ({ active }) => {
                 backgroundImage: `url(${background})`,
             }}
         >
-            {active && (
-                <div>
-                    <p>asd</p>
-                    <button onClick={() => console.log(active)}>
-                        sdfgsdfgdfsgdsf
-                    </button>
+            <CSSTransition
+                unmountOnExit
+                in={active}
+                timeout={2000}
+                classNames="active"
+            >
+                <div className="active">
+                    <MainPageActiveElement elementName={'solar'} />
                 </div>
-            )}
+            </CSSTransition>
         </div>
     );
 };

@@ -11,6 +11,7 @@ import ModelS from './ModelS';
 import ModelX from './ModelX';
 import ModelY from './ModelY';
 import Solar from './Solar';
+import './css/LandingPage.css';
 
 const Landingpage = () => {
     const scrollDir = useScrollDirection();
@@ -79,10 +80,10 @@ const Landingpage = () => {
                 <Model3 active={activeElement === 'model3' ? true : false} />
             </Element>
             <Element name="modelsElement">
-                <ModelS active={activeElement} />
+                <ModelS active={activeElement === 'models' ? true : false} />
             </Element>
             <Element name="modelxElement">
-                <ModelX active={activeElement} />
+                <ModelX active={activeElement === 'modelx' ? true : false} />
             </Element>
             <Element name="solarElement">
                 <Solar active={activeElement === 'solar' ? true : false} />

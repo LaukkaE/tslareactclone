@@ -1,6 +1,7 @@
 import React from 'react';
+import { CSSTransition } from 'react-transition-group';
 import background from '../pics/ms-homepage-desktop.jpg';
-import './css/background.css';
+import MainPageActiveElement from './MainPageActiveElement';
 
 const ModelS = ({ active }) => {
     return (
@@ -8,7 +9,16 @@ const ModelS = ({ active }) => {
             className="background models"
             style={{ backgroundImage: `url(${background})` }}
         >
-            ModelS
+            <CSSTransition
+                unmountOnExit
+                in={active}
+                timeout={2000}
+                classNames="active"
+            >
+                <div className="active">
+                    <MainPageActiveElement elementName={'models'} />
+                </div>
+            </CSSTransition>
         </div>
     );
 };
