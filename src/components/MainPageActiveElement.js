@@ -13,6 +13,8 @@ const MainPageActiveElement = ({ elementName, active }) => {
             return 'Model X';
         } else if (elementName === 'solar') {
             return 'Solar';
+        } else {
+            return null;
         }
     };
 
