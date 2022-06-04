@@ -8,14 +8,14 @@ const Navbar = () => {
     const [openMenu, setOpenMenu] = useState(false);
     return (
         <div className="navbar_container">
-            <Router><div className="navbar">
-                
+            <Router>
+                <div className="navbar">
                     <div className="logo">
                         <Link to="/">
                             <img src={teslaLogo} alt="Tesla" />
                         </Link>
                     </div>
-                    <div className="car_links">
+                    <div className="car_links hideable">
                         <ul>
                             <li>
                                 <Link to="/models">
@@ -46,22 +46,27 @@ const Navbar = () => {
                     </div>
                     <div className="support_links">
                         <ul>
-                            <li>
+                            <li className="hideable">
                                 <Link to="/support">
                                     <p>Support</p>
                                 </Link>
                             </li>
-                            <li>
+                            <li className="hideable">
                                 <Link to="/account">
                                     <p>Account</p>
                                 </Link>
                             </li>
                             <li>
-                                <p onClick={() => setOpenMenu(!openMenu)}>Menu</p>
+                                <p
+                                    className="menu_button"
+                                    onClick={() => setOpenMenu(!openMenu)}
+                                >
+                                    Menu
+                                </p>
                             </li>
                         </ul>
                     </div>
-            </div>
+                </div>
                 <SideMenu active={openMenu} setOpenMenu={setOpenMenu} />
             </Router>
         </div>

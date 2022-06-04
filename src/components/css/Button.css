@@ -1,0 +1,28 @@
+.button {
+    border-radius: 20px;
+    /* padding: 10px 80px; */
+    width: 265px;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    white-space: nowrap;
+    /* overflow: hidden; */
+    /* text-overflow: ellipsis; */
+}
+.button:hover {
+    cursor: pointer;
+}
+.button_dark {
+    background-color: #3e3f43;
+    color: white;
+}
+.button_light {
+    background-color: #e9e9e8;
+}
+
+@media only screen and (max-width: 550px) {
+    .button {
+        min-width: 400px;
+    }
+}

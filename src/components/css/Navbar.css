@@ -57,7 +57,34 @@
 
 .close_button {
     position: absolute;
-    right: 20px;
+    right: 25px;
+    top: 40px;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: inherit;
+    border: none;
+    z-index: inherit + 1;
+}
+.close_button:before,
+.close_button::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    width: 1.5px;
+    height: 20px;
+    background-color: black;
+}
+.close_button:before {
+    transform: rotate(45deg);
+}
+.close_button:after {
+    transform: rotate(-45deg);
+}
+
+.close_button:hover {
+    cursor: pointer;
+    background-color: rgba(000, 000, 000, 0.08);
 }
 
 .menu ul {
@@ -74,7 +101,7 @@
 }
 .open {
     transform: translateX(-300px);
-    transition: 250ms ease-in-out;
+    transition: transform 250ms ease-in-out;
 }
 
 .blur_effect {
@@ -85,5 +112,17 @@
     width: 100vw;
     height: 100vh;
     background-color: rgba(0, 0, 0, 0.4);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(4px);
+    backface-visibility: hidden;
+}
+
+@media only screen and (max-width: 1200px) {
+    .hideable {
+        display: none;
+    }
+    .navbar ul li {
+        background-color: rgba(000, 000, 000, 0.08);
+        border-radius: 10px;
+        cursor: pointer;
+    }
 }

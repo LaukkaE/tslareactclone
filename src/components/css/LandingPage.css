@@ -12,7 +12,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: center;
-    max-width: 350px;
+    max-width: 550px;
     margin: auto;
     height: 100%;
     /* animation: fadeInAnimation 2s; */
@@ -32,17 +32,11 @@
     transition: opacity 500ms;
 }
 
-/* @keyframes fadeInAnimation {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
-} */
 .intro_text {
-    padding-top: 12rem;
+    padding-top: 18rem;
     margin: 0 auto;
+    font-size: 40px;
+    font-weight: bold;
 }
 
 .buttons {
@@ -51,30 +45,25 @@
     justify-content: space-between;
     position: relative;
     width: 100%;
-    bottom: 8vh;
+    bottom: 9vh;
 }
 /* Solar button to the middle */
 .buttons a:only-child {
     margin: 0 auto;
 }
-.button {
-    border-radius: 15px;
-    padding: 8px 55px;
-    font-size: 0.5rem;
-    font-weight: bold;
-    border: none;
-}
-.button:hover {
-    cursor: pointer;
-}
-.button_dark {
-    background-color: #3e3f43;
-    color: white;
-}
-.button_light {
-    background-color: #e9e9e8;
+
+@media only screen and (max-width: 550px) {
+    .buttons {
+        min-width: 320px;
+        position: relative;
+        flex-direction: column;
+        /* justify-content: center; */
+        align-items: center;
+        gap: 1rem;
+    }
 }
 
+/* Change to mobile backgrounds */
 @media only screen and (max-width: 600px) {
     .model3 {
         background-image: url('../../pics/Mobile-model_3.jpg') !important;

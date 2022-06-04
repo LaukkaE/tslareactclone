@@ -13,9 +13,7 @@ const SideMenu = ({ active, setOpenMenu }) => {
                 <button
                     className="close_button"
                     onClick={() => setOpenMenu(false)}
-                >
-                    X
-                </button>
+                ></button>
                 <ul>
                     <li>
                         <Link to="/roadster">
