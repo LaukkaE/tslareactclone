@@ -21,6 +21,10 @@
     gap: 1rem;
 }
 
+.sidemenu ul {
+    gap: 0.5rem;
+}
+
 .navbar ul li p,
 .sidemenu ul li p {
     padding: 5px 10px;
@@ -53,6 +57,10 @@
     left: 100%;
     z-index: 50;
     box-shadow: 2px black;
+}
+
+.sidemenu_mobile {
+    display: none;
 }
 
 .close_button {
@@ -116,6 +124,52 @@
     backface-visibility: hidden;
 }
 
+.language_button {
+    display: flex;
+    flex-direction: column;
+}
+.language_button p {
+    margin-left: 1rem;
+}
+.language_button .english {
+    font-weight: lighter;
+    font-size: 12px;
+    text-decoration: underline 2px rgba(0, 0, 0, 0);
+    transition: text-decoration-color 250ms;
+}
+.language_button .english:hover {
+    text-decoration-color: rgba(0, 0, 0, 1);
+}
+
+.globe_icon {
+    position: absolute;
+    margin: auto 0;
+    left: 3rem;
+    /* top: 1rem; */
+    margin-top: 1rem;
+}
+
+.angle_right_icon {
+    position: absolute;
+    right: 2rem;
+    /* margin: 0 auto; */
+}
+
+.angle_left_icon {
+    position: absolute;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.back_button {
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+}
+.back_button p {
+    margin-left: 0.5rem;
+}
+
 @media only screen and (max-width: 1200px) {
     .hideable {
         display: none;
@@ -123,6 +177,12 @@
     .navbar ul li {
         background-color: rgba(000, 000, 000, 0.08);
         border-radius: 10px;
-        cursor: pointer;
+        /* cursor: pointer; */
+    }
+    .sidemenu_mobile {
+        display: block;
+    }
+    .sidemenu_mobile_hide {
+        display: none;
     }
 }

@@ -72,6 +72,7 @@ const Landingpage = () => {
             className="landing"
             // onClick={() => asd()}
             onWheel={(e) => handleScroll(e)}
+            onTouchMove={(e) => handleScroll(e)}
         >
             <Element name="modelyElement">
                 <ModelY active={activeElement === 'modely' ? true : false} />
