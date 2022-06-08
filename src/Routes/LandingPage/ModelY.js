@@ -1,13 +1,13 @@
 import React from 'react';
-import { CSSTransition } from 'react-transition-group';
-import background from '../pics/mx-homepage-desktop.jpg';
+import background from '../../pics/Desktop-ModelY.jpg';
 import MainPageActiveElement from './MainPageActiveElement';
+import { CSSTransition } from 'react-transition-group';
 
-const ModelX = ({ active }) => {
+const ModelY = ({ active }) => {
     return (
         <div
-            className="background modelx"
             style={{ backgroundImage: `url(${background})` }}
+            className="background modely"
         >
             <CSSTransition
                 unmountOnExit
@@ -16,11 +16,11 @@ const ModelX = ({ active }) => {
                 classNames="active"
             >
                 <div className="active">
-                    <MainPageActiveElement elementName={'modelx'} />
+                    <MainPageActiveElement elementName={'modely'} />
                 </div>
             </CSSTransition>
         </div>
     );
 };
 
-export default ModelX;
+export default ModelY;

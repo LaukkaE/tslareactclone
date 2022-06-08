@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Link } from 'react-router-dom';
-import Button from './Button';
+import Button from '../../components/Button';
 
 const MainPageActiveElement = ({ elementName, active }) => {
     const introText = () => {

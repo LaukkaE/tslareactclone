@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './css/Navbar.css';
+import '../css/Navbar.css';
 import teslaLogo from '../pics/teslalogo.svg';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import SideMenu from './SideMenu';

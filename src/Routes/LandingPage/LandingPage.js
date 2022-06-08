@@ -5,13 +5,13 @@ import {
     // animateScroll as scroll,
     scroller,
 } from 'react-scroll';
-import { useScrollDirection } from '../utils/useScrollDirection';
+import { useScrollDirection } from '../../utils/useScrollDirection';
 import Model3 from './Model3';
 import ModelS from './ModelS';
 import ModelX from './ModelX';
 import ModelY from './ModelY';
 import Solar from './Solar';
-import './css/LandingPage.css';
+import '../../css/LandingPage.css';
 
 const Landingpage = () => {
     const scrollDir = useScrollDirection();

@@ -25,7 +25,7 @@ const SideMenu = ({ active, setOpenMenu }) => {
                     }}
                 ></button>
                 <ul>
-                    {!moreMenu && (
+                    {!moreMenu ? (
                         <>
                             {' '}
                             <li className="sidemenu_mobile">
@@ -109,8 +109,7 @@ const SideMenu = ({ active, setOpenMenu }) => {
                                 </p>
                             </li>{' '}
                         </>
-                    )}
-                    {moreMenu && (
+                    ) : (
                         <>
                             <li
                                 className="back_button"
@@ -136,6 +135,7 @@ const SideMenu = ({ active, setOpenMenu }) => {
                             </li>
                         </>
                     )}
+
                     <li className="language_button">
                         <FontAwesomeIcon
                             className="globe_icon"

@@ -1,13 +1,15 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import background from '../pics/desktop_model_3_v2.jpg';
+import background from '../../pics/Desktop-SolarPanels.jpg';
 import MainPageActiveElement from './MainPageActiveElement';
 
-const Model3 = ({ active }) => {
+const Solar = ({ active }) => {
     return (
         <div
-            className="background model3"
-            style={{ backgroundImage: `url(${background})` }}
+            className="background solar"
+            style={{
+                backgroundImage: `url(${background})`,
+            }}
         >
             <CSSTransition
                 unmountOnExit
@@ -16,11 +18,11 @@ const Model3 = ({ active }) => {
                 classNames="active"
             >
                 <div className="active">
-                    <MainPageActiveElement elementName={'modelx'} />
+                    <MainPageActiveElement elementName={'solar'} />
                 </div>
             </CSSTransition>
         </div>
     );
 };
 
-export default Model3;
+export default Solar;

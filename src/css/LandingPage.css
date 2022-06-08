@@ -66,18 +66,18 @@
 /* Change to mobile backgrounds */
 @media only screen and (max-width: 600px) {
     .model3 {
-        background-image: url('../../pics/Mobile-model_3.jpg') !important;
+        background-image: url('../pics/Mobile-model_3.jpg') !important;
     }
     .models {
-        background-image: url('../../pics/Homepage-Model-S-Mobile-LHD.jpg') !important;
+        background-image: url('../pics/Homepage-Model-S-Mobile-LHD.jpg') !important;
     }
     .modelx {
-        background-image: url('../../pics/Homepage-Model-X-Mobile-LHD.jpg') !important;
+        background-image: url('../pics/Homepage-Model-X-Mobile-LHD.jpg') !important;
     }
     .modely {
-        background-image: url('../../pics/Mobile-ModelY.jpg') !important;
+        background-image: url('../pics/Mobile-ModelY.jpg') !important;
     }
     .solar {
-        background-image: url('../../pics/Mobile-SolarPanels.jpg') !important;
+        background-image: url('../pics/Mobile-SolarPanels.jpg') !important;
     }
 } ;
