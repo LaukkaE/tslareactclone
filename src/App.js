@@ -1,13 +1,45 @@
 import './css/App.css';
 
 import Navbar from './components/Navbar';
-import Landingpage from './Routes/LandingPage/LandingPage';
+import Landingpage from './Routes/LandingPage';
+import { Route, BrowserRouter, Routes } from 'react-router-dom';
+import ModelS from './Routes/ModelS';
+import Model3 from './Routes/Model3';
 
 function App() {
     return (
         <div className="App">
-            <Navbar />
-            <Landingpage />
+            <BrowserRouter>
+                <Routes>
+                    <Route
+                        path="/"
+                        element={
+                            <>
+                                <Navbar />
+                                <Landingpage />
+                            </>
+                        }
+                    ></Route>
+                    <Route
+                        path="/models"
+                        element={
+                            <>
+                                <Navbar />
+                                <ModelS />
+                            </>
+                        }
+                    ></Route>
+                    <Route
+                        path="/model3"
+                        element={
+                            <>
+                                <Navbar />
+                                <Model3 />
+                            </>
+                        }
+                    ></Route>
+                </Routes>
+            </BrowserRouter>
         </div>
     );
 }

@@ -16,7 +16,7 @@ const Model3 = ({ active }) => {
                 classNames="active"
             >
                 <div className="active">
-                    <MainPageActiveElement elementName={'modelx'} />
+                    <MainPageActiveElement elementName={'model3'} />
                 </div>
             </CSSTransition>
         </div>

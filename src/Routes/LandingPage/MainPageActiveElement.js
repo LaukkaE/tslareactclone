@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Button from '../../components/Button';
 
 const MainPageActiveElement = ({ elementName, active }) => {
@@ -23,16 +23,14 @@ const MainPageActiveElement = ({ elementName, active }) => {
         <>
             <p className="intro_text">{introText()}</p>
             <div className="buttons">
-                <Router>
-                    <Link to={`/${elementName}/design`}>
-                        <Button mode="dark" text="CUSTOM ORDER" />
+                <Link to={`/${elementName}/design`}>
+                    <Button mode="dark" text="CUSTOM ORDER" />
+                </Link>
+                {elementName !== 'solar' && (
+                    <Link to={`/${elementName}/`}>
+                        <Button mode="light" text="LEARN MORE" />
                     </Link>
-                    {elementName !== 'solar' && (
-                        <Link to={`/${elementName}/`}>
-                            <Button mode="light" text="LEARN MORE" />
-                        </Link>
-                    )}
-                </Router>
+                )}
             </div>
         </>
     );
