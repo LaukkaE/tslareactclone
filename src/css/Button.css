@@ -1,4 +1,4 @@
-.button {
+.button_large {
     border-radius: 20px;
     /* padding: 10px 80px; */
     width: 265px;
@@ -10,6 +10,21 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 }
+.button_small {
+    border-radius: 20px;
+    width: 220px;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    white-space: nowrap;
+}
+.button_round {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    font-size: 18px;
+}
 .button:hover {
     cursor: pointer;
 }
@@ -19,6 +34,15 @@
 }
 .button_light {
     background-color: #e9e9e8;
+}
+.button_white {
+    background-color: #ffff;
+    border: 2px solid black;
+    transition: all 250ms ease-in-out;
+}
+.button_white:hover {
+    background-color: black;
+    color: #ffff;
 }
 
 @media only screen and (max-width: 550px) {

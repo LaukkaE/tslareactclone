@@ -6,3 +6,42 @@
     /* width: 100%; */
     height: 100vh;
 }
+
+/* SAFETY component */
+.model3safety {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+}
+
+.safety_text {
+    margin-left: 3rem;
+    margin-top: 5rem;
+    /* padding: 1rem; */
+}
+.safety_text p {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+.safety_text h3 {
+    text-align: center;
+    letter-spacing: 1.5px;
+    margin-top: 2rem;
+}
+
+.occupant_div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.safety_buttons {
+    position: absolute;
+    display: flex;
+    top: 190vh;
+    /* text-align: center; */
+}
+
+.safety_buttons p {
+    margin: auto;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
