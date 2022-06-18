@@ -4,15 +4,19 @@ import teslaLogo from '../pics/teslalogo.svg';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import SideMenu from './SideMenu';
 
-const Navbar = () => {
+const Navbar = ({ color = 'black', mode = 'fixed' }) => {
     const [openMenu, setOpenMenu] = useState(false);
     return (
         <div className="navbar_container">
             {/* <Router> */}
-            <div className="navbar">
+            <div className={`navbar color_${color} mode_${mode}`}>
                 <div className="logo">
                     <Link to="/">
-                        <img src={teslaLogo} alt="Tesla" />
+                        <img
+                            src={teslaLogo}
+                            // style={{ fill: color }}
+                            alt="Tesla"
+                        />
                     </Link>
                 </div>
                 <div className="car_links hideable">

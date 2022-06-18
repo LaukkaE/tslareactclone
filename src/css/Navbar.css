@@ -1,5 +1,4 @@
 .navbar {
-    position: fixed;
     z-index: 11;
     display: flex;
     justify-content: space-between;
@@ -9,8 +8,15 @@
     /* gap: 2rem; */
     padding: 0 1rem;
 
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 }
+.mode_fixed {
+    position: fixed;
+}
+.mode_absolute {
+    position: absolute;
+}
+
 /* TODO: fix hacky transform */
 .car_links {
     transform: translateX(10%);
@@ -25,7 +31,36 @@
     gap: 0.5rem;
 }
 
-.navbar ul li p,
+.navbar ul li p {
+    padding: 5px 10px;
+    /* transition: 1000ms ease-in-out; */
+    font-size: 1rem;
+    font-weight: 600;
+}
+.navbar ul li:hover {
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 250ms ease-in-out;
+}
+.color_black ul li:hover {
+    background-color: rgba(000, 000, 000, 0.08);
+}
+.color_black ul li p {
+    color: black;
+}
+.color_white ul li:hover {
+    background-color: rgb(255, 255, 255, 0.15);
+}
+.color_white ul li p {
+    color: white;
+}
+.color_white img {
+    /* css filter generator #FFF */
+    filter: invert(100%) sepia(8%) saturate(1172%) hue-rotate(303deg)
+        brightness(112%) contrast(107%);
+}
+
+/* .navbar ul li p, */
 .sidemenu ul li p {
     padding: 5px 10px;
     color: black;
@@ -34,7 +69,7 @@
     font-weight: 600;
 }
 
-.navbar ul li :hover,
+/* .navbar ul li :hover, */
 .sidemenu ul li:hover {
     background-color: rgba(000, 000, 000, 0.08);
     border-radius: 10px;
