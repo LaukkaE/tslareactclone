@@ -12,9 +12,9 @@ import Model3Autopilot from './Model3Autopilot';
 import { useScrollDirection } from '../../utils/useScrollDirection';
 
 const Model3 = () => {
-  const scrollDir = useScrollDirection();
+    const scrollDir = useScrollDirection();
     return (
-        <div>
+        <div className="model3component">
             <Model3Main />
             <Model3Safety />
             <Model3Performance />

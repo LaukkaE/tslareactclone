@@ -33,7 +33,7 @@ function App() {
                         path="/model3"
                         element={
                             <>
-                                <Navbar />
+                                <Navbar color='white' mode='absolute' />
                                 <Model3 />
                             </>
                         }

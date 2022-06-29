@@ -1,4 +1,4 @@
-.button_large {
+.button_size_large {
     border-radius: 20px;
     /* padding: 10px 80px; */
     width: 265px;
@@ -10,7 +10,7 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 }
-.button_small {
+.button_size_small {
     border-radius: 20px;
     width: 220px;
     height: 40px;
@@ -19,7 +19,7 @@
     border: none;
     white-space: nowrap;
 }
-.button_round {
+.button_size_round {
     height: 40px;
     width: 40px;
     border-radius: 50%;
@@ -28,19 +28,30 @@
 .button:hover {
     cursor: pointer;
 }
-.button_dark {
+.button_mode_transparent {
+    background-color: rgba(0, 0, 0, 0.01);
+    border: 2px solid white;
+    color: white;
+    transition: all 250ms ease-in-out;
+}
+.button_mode_transparent:hover {
+    background-color: white;
+    color: black;
+}
+
+.button_mode_dark {
     background-color: #3e3f43;
     color: white;
 }
 .button_light {
     background-color: #e9e9e8;
 }
-.button_white {
+.button_mode_white {
     background-color: #ffff;
     border: 2px solid black;
     transition: all 250ms ease-in-out;
 }
-.button_white:hover {
+.button_mode_white:hover {
     background-color: black;
     color: #ffff;
 }
