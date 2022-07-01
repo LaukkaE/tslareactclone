@@ -1,10 +1,12 @@
-import React, { useState } from 'react';
+import React, { useContext, useState } from 'react';
 import '../css/Navbar.css';
 import teslaLogo from '../pics/teslalogo.svg';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import SideMenu from './SideMenu';
+import { ModalContext } from '../utils/ModalContext';
 
 const Navbar = ({ color = 'black', mode = 'fixed' }) => {
+    const setModal = useContext(ModalContext);
     const [openMenu, setOpenMenu] = useState(false);
     return (
         <div className="navbar_container">
@@ -21,44 +23,44 @@ const Navbar = ({ color = 'black', mode = 'fixed' }) => {
                 </div>
                 <div className="car_links hideable">
                     <ul>
-                        <li>
-                            <Link to="/models">
-                                <p>Model S</p>
-                            </Link>
+                        <li onClick={() => setModal(true)}>
+                            {/* <Link to="/models"> */}
+                            <p>Model S</p>
+                            {/* </Link> */}
                         </li>
                         <li>
                             <Link to="/model3">
                                 <p>Model 3</p>
                             </Link>
                         </li>
-                        <li>
-                            <Link to="/modelx">
-                                <p>Model X</p>
-                            </Link>
+                        <li onClick={() => setModal(true)}>
+                            {/* <Link to="/modelx"> */}
+                            <p>Model X</p>
+                            {/* </Link> */}
                         </li>
-                        <li>
-                            <Link to="/modely">
-                                <p>Model Y</p>
-                            </Link>
+                        <li onClick={() => setModal(true)}>
+                            {/* <Link to="/modely"> */}
+                            <p>Model Y</p>
+                            {/* </Link> */}
                         </li>
-                        <li>
-                            <Link to="/charging">
-                                <p>Charging</p>
-                            </Link>
+                        <li onClick={() => setModal(true)}>
+                            {/* <Link to="/charging"> */}
+                            <p>Charging</p>
+                            {/* </Link> */}
                         </li>
                     </ul>
                 </div>
                 <div className="support_links">
                     <ul>
-                        <li className="hideable">
-                            <Link to="/support">
+                        <li className="hideable" onClick={() => setModal(true)}>
+                            {/* <Link to="/support"> */}
                                 <p>Support</p>
-                            </Link>
+                            {/* </Link> */}
                         </li>
-                        <li className="hideable">
-                            <Link to="/account">
+                        <li className="hideable" onClick={() => setModal(true)}>
+                            {/* <Link to="/account"> */}
                                 <p>Account</p>
-                            </Link>
+                            {/* </Link> */}
                         </li>
                         <li>
                             <p

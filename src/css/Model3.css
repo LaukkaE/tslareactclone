@@ -7,7 +7,6 @@
     height: 100vh;
 }
 /* MAIN COMPONENT */
-
 .model3main .introtext {
     /* padding-top: 18rem; */
     margin: 0 auto;
@@ -34,9 +33,9 @@
     color: white;
     margin-bottom: 0.5rem;
 }
-
 /* MAIN COMPONENT END */
-/* SAFETY component */
+
+/* SAFETY COMPONENT */
 .model3safety {
     display: grid;
     grid-template-columns: 1fr 5fr;
@@ -74,4 +73,4 @@
     padding-left: 0.5rem;
     padding-right: 0.5rem;
 }
-/* SAFETY component end */
+/* SAFETY COMPONENT END */

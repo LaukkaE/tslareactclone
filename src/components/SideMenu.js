@@ -4,11 +4,14 @@ import {
     faAngleRight,
     faGlobe,
 } from '@fortawesome/free-solid-svg-icons';
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { ModalContext } from '../utils/ModalContext';
 
 const SideMenu = ({ active, setOpenMenu }) => {
     const [moreMenu, setMoreMenu] = useState(false);
+    const setModal = useContext(ModalContext);
+
     useEffect(() => {
         const body = document.querySelector('body');
         body.style.overflow = active ? 'hidden' : 'auto';
@@ -28,72 +31,93 @@ const SideMenu = ({ active, setOpenMenu }) => {
                     {!moreMenu ? (
                         <>
                             {' '}
-                            <li className="sidemenu_mobile">
-                                <Link to="/roadster">
-                                    <p>Model S</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/models"> */}
+                                <p>Model S</p>
+                                {/* </Link> */}
                             </li>
                             <li className="sidemenu_mobile">
-                                <Link to="/roadster">
+                                <Link to="/model3">
                                     <p>Model 3</p>
                                 </Link>
                             </li>
-                            <li className="sidemenu_mobile">
-                                <Link to="/roadster">
-                                    <p>Model X</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/modelx"> */}
+                                <p>Model X</p>
+                                {/* </Link> */}
                             </li>
-                            <li className="sidemenu_mobile">
-                                <Link to="/roadster">
-                                    <p>Model Y</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/modely"> */}
+                                <p>Model Y</p>
+                                {/* </Link> */}
                             </li>
-                            <li className="sidemenu_mobile">
-                                <Link to="/roadster">
-                                    <p>Powerwall</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/energy"> */}
+                                <p>Powerwall</p>
+                                {/* </Link> */}
                             </li>
-                            <li className="sidemenu_mobile_hide">
-                                <Link to="/roadster">
-                                    <p>Roadster</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile_hide"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/roadster"> */}
+                                <p>Roadster</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/commercial">
-                                    <p>Commercial Energy</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/commercial"> */}
+                                <p>Commercial Energy</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/utilities">
-                                    <p>Utilities</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/utilities"> */}
+                                <p>Utilities</p>
+                                {/* </Link> */}
                             </li>
-                            <li className="sidemenu_mobile">
-                                <Link to="/utilities">
-                                    <p>Charging</p>
-                                </Link>
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
+                                {/* <Link to="/utilities"> */}
+                                <p>Charging</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/energy">
-                                    <p>Energy</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/energy"> */}
+                                <p>Energy</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/findus">
-                                    <p>Find Us</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/findus"> */}
+                                <p>Find Us</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/support">
-                                    <p>Support</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/support"> */}
+                                <p>Support</p>
+                                {/* </Link> */}
                             </li>
-                            <li>
-                                <Link to="/ir">
-                                    <p>Investor Relations</p>
-                                </Link>
+                            <li onClick={() => setModal(true)}>
+                                {/* <Link to="/ir"> */}
+                                <p>Investor Relations</p>
+                                {/* </Link> */}
                             </li>
-                            <li className="sidemenu_mobile">
+                            <li
+                                className="sidemenu_mobile"
+                                onClick={() => setModal(true)}
+                            >
                                 <p>Account</p>
                             </li>
                             <li
