@@ -3,11 +3,12 @@ import background from '../../pics/model3/model3order.jpg';
 
 const Model3Order = () => {
     return (
-        <div
-            className="model3order background"
-            style={{ backgroundImage: `url(${background})` }}
-        >
-            Model3Main
+        <div className="model3order">
+            <div className="order_text"></div>
+            <div
+                className="background"
+                style={{ backgroundImage: `url(${background})` }}
+            ></div>
         </div>
     );
 };

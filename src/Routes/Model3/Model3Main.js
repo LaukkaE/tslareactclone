@@ -5,7 +5,7 @@ import background from '../../pics/model3/Model3Main.jpg';
 const Model3Main = () => {
     return (
         <div
-            className="model3main background"
+            className="model3main model3main_background background"
             style={{ backgroundImage: `url(${background})` }}
         >
             <p className="introtext">Model 3</p>

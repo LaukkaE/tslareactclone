@@ -22,8 +22,7 @@ const Model3Safety = () => {
                     Quidem eos, debitis, ipsa voluptatum quas velit vitae
                     dolorum tempore repellat delectus fugit labore, facere
                     quisquam deserunt adipisci? Voluptatibus voluptate in
-                    quaerat magni quas facere laudantium facilis. Cupiditate
-                    officiis consequuntur corrupti ipsam!
+                    quaerat magni quas facere laudantium facilis.
                 </p>
                 <h3>5-Star Safety Rating</h3>
                 <div className="safety_rating">
@@ -73,7 +72,7 @@ const Model3Safety = () => {
                 </div>
             </div>
             <div
-                className="background"
+                className="background safety_background"
                 style={{ backgroundImage: `url(${background})` }}
             ></div>
         </div>
