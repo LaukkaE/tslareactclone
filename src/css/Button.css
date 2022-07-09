@@ -10,6 +10,15 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 }
+.button_size_thin {
+    border-radius: 20px;
+    width: 250px;
+    height: 32px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    white-space: nowrap;
+}
 .button_size_small {
     border-radius: 20px;
     width: 220px;
@@ -38,6 +47,11 @@
     background-color: white;
     color: black;
 }
+.button_mode_specs {
+    background-color: #000;
+    color: white;
+    border: 2px solid #3e3f43;
+}
 
 .button_mode_dark {
     background-color: #3e3f43;
@@ -54,6 +68,10 @@
 .button_mode_white:hover {
     background-color: black;
     color: #ffff;
+}
+
+.button_active {
+    border: 2px solid white;
 }
 
 @media only screen and (max-width: 550px) {

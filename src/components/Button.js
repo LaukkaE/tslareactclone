@@ -4,10 +4,18 @@ import '../css/Button.css';
 // Modes: dark, light, white, transparent
 // Sizes: large, small, round
 
-const Button = ({ mode = 'white', text, size = 'large', onClick = null }) => {
+const Button = ({
+    mode = 'white',
+    text,
+    size = 'large',
+    onClick = null,
+    active = null,
+}) => {
     return (
         <button
-            className={`button button_mode_${mode} button_size_${size}`}
+            className={`button button_mode_${mode} button_size_${size} ${
+                active ? 'button_active' : ''
+            }`}
             onClick={onClick}
         >
             {text}

@@ -350,19 +350,65 @@
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    gap: 10rem;
 }
 .model3specs .background {
     background-size: 100%;
+}
+.model3specs .specs_content {
+    position: relative;
+    top: 28vh;
+}
+.model3specs .specs_content_buttons {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: auto auto;
+    column-gap: 0px;
+}
+
+.model3specs p,
+.model3specs h2 {
+    color: white;
 }
 /* SPECS COMPONENT END */
 /* ORDER COMPONENT  */
 .model3order {
     height: 100vh;
     background-color: #000;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
 }
+.model3order .order_wrapper {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    height: 400px;
+    max-width: 1800px;
+    margin: auto 0;
+    margin-left: auto;
+    gap: 10rem;
+    flex-grow: 1;
+}
+
 .model3order .background {
-    background-size: 95%;
+    background-size: contain;
+    width: auto;
+    max-height: 100%;
+}
+.model3order .order_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    /* width: auto; */
+}
+.model3order .order_content_buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.model3order h2 {
+    color: white;
+    font-size: 30px;
 }
 /* ORDER COMPONENT END */
