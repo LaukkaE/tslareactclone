@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 import {
     Element,
@@ -15,39 +15,44 @@ import '../../css/LandingPage.css';
 
 const Landingpage = () => {
     const scrollDir = useScrollDirection();
+    const scrollRef = useRef(scrollDir);
     const [activeElement, setActiveElement] = useState('modely');
 
     const executeScroll = () => {
+        let scrollDirection = scrollRef.current;
         // console.log('execute');
         let offsetY = window.scrollY;
-        if (scrollDir === 'up' && offsetY < window.innerHeight) {
+        if (scrollDirection === 'up' && offsetY < window.innerHeight) {
             scroller.scrollTo('modelyElement', { smooth: true });
             setActiveElement('modely');
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 2)
         ) {
             scroller.scrollTo('model3Element', { smooth: true });
             setActiveElement('model3');
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 2) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 2) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 3)
         ) {
             scroller.scrollTo('modelsElement', { smooth: true });
             setActiveElement('models');
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 3) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 3) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 4)
         ) {
             scroller.scrollTo('modelxElement', { smooth: true });
             setActiveElement('modelx');
-        } else if (scrollDir === 'down' && offsetY >= window.innerHeight * 3) {
+        } else if (
+            scrollDirection === 'down' &&
+            offsetY >= window.innerHeight * 3
+        ) {
             scroller.scrollTo('solarElement', { smooth: true });
             setActiveElement('solar');
         } else {
@@ -63,9 +68,9 @@ const Landingpage = () => {
             executeScroll();
         }, 600);
     };
-    // const asd = () => {
-    //     console.log(activeElement);
-    // };
+    useEffect(() => {
+        scrollRef.current = scrollDir;
+    }, [scrollDir]);
 
     return (
         <div

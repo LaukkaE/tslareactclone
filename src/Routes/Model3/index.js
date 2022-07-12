@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import Model3Main from './Model3Main';
 import Model3Safety from './Model3Safety';
 import '../../css/Model3.css';
@@ -18,62 +18,63 @@ import {
 
 const Model3 = () => {
     const scrollDir = useScrollDirection();
+    const scrollRef = useRef(scrollDir);
 
     const executeScroll = () => {
-        // console.log('execute');
+        let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;
-        if (scrollDir === 'up' && offsetY < window.innerHeight) {
+        if (scrollDirection === 'up' && offsetY < window.innerHeight) {
             scroller.scrollTo('model3main', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 2)
         ) {
             scroller.scrollTo('model3safety', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 2) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 2) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 3)
         ) {
             scroller.scrollTo('model3performance', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 3) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 3) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 4)
         ) {
             scroller.scrollTo('model3awd', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 4) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 4) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 5)
         ) {
             scroller.scrollTo('model3range', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 5) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 5) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 6)
         ) {
             scroller.scrollTo('model3autopilot', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 6) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 6) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 7)
         ) {
             scroller.scrollTo('model3interior', { smooth: true });
         } else if (
-            (scrollDir === 'down' && offsetY <= window.innerHeight * 7) ||
-            (scrollDir === 'up' &&
+            (scrollDirection === 'down' && offsetY <= window.innerHeight * 7) ||
+            (scrollDirection === 'up' &&
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 8)
         ) {
             scroller.scrollTo('model3specs', { smooth: true });
-        } else if (scrollDir === 'down') {
+        } else if (scrollDirection === 'down') {
             scroller.scrollTo('model3order', { smooth: true });
         } else {
             console.log('foo');
@@ -88,10 +89,13 @@ const Model3 = () => {
             executeScroll();
         }, 600);
     };
+    useEffect(() => {
+        scrollRef.current = scrollDir;
+    }, [scrollDir]);
 
     return (
         <div
-            className="model3component"
+            className={`model3component`}
             onWheel={(e) => handleScroll(e)}
             onTouchMove={(e) => handleScroll(e)}
         >

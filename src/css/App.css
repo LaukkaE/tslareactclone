@@ -6,3 +6,6 @@
     font-family: 'Raleway', sans-serif;
 }
 
+#portal::-webkit-scrollbar {
+    display: none;
+}

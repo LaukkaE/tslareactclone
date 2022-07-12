@@ -1,9 +1,8 @@
-import React from 'react'
+import React from 'react';
+import '../../css/ModelS.css';
 
 const ModelS = () => {
-  return (
-    <div>index</div>
-  )
-}
+    return <div className="modelSContent">index</div>;
+};
 
-export default ModelS
+export default ModelS;

@@ -29,7 +29,7 @@ function App() {
                             path="/models"
                             element={
                                 <>
-                                    <Navbar />
+                                    {/* <Navbar /> */}
                                     <ModelS />
                                 </>
                             }

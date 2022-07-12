@@ -23,10 +23,10 @@ const Navbar = ({ color = 'black', mode = 'fixed' }) => {
                 </div>
                 <div className="car_links hideable">
                     <ul>
-                        <li onClick={() => setModal(true)}>
-                            {/* <Link to="/models"> */}
-                            <p>Model S</p>
-                            {/* </Link> */}
+                        <li>
+                            <Link to="/models">
+                                <p>Model S</p>
+                            </Link>
                         </li>
                         <li>
                             <Link to="/model3">
@@ -54,12 +54,12 @@ const Navbar = ({ color = 'black', mode = 'fixed' }) => {
                     <ul>
                         <li className="hideable" onClick={() => setModal(true)}>
                             {/* <Link to="/support"> */}
-                                <p>Support</p>
+                            <p>Support</p>
                             {/* </Link> */}
                         </li>
                         <li className="hideable" onClick={() => setModal(true)}>
                             {/* <Link to="/account"> */}
-                                <p>Account</p>
+                            <p>Account</p>
                             {/* </Link> */}
                         </li>
                         <li>
