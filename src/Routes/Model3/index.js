@@ -15,16 +15,25 @@ import {
     // animateScroll as scroll,
     scroller,
 } from 'react-scroll';
+import Model3Bars from './Model3Bars';
+import { useState } from 'react';
 
 const Model3 = () => {
     const scrollDir = useScrollDirection();
     const scrollRef = useRef(scrollDir);
+    const [activeElement, setActiveElement] = useState('model3main');
+
+    const handleBarClick = (target) => {
+        scroller.scrollTo(target, { smooth: true });
+        setActiveElement(target);
+    };
 
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;
         if (scrollDirection === 'up' && offsetY < window.innerHeight) {
             scroller.scrollTo('model3main', { smooth: true });
+            setActiveElement('model3main');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight) ||
             (scrollDirection === 'up' &&
@@ -32,6 +41,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 2)
         ) {
             scroller.scrollTo('model3safety', { smooth: true });
+            setActiveElement('model3safety');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 2) ||
             (scrollDirection === 'up' &&
@@ -39,6 +49,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 3)
         ) {
             scroller.scrollTo('model3performance', { smooth: true });
+            setActiveElement('model3performance');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 3) ||
             (scrollDirection === 'up' &&
@@ -46,6 +57,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 4)
         ) {
             scroller.scrollTo('model3awd', { smooth: true });
+            setActiveElement('model3awd');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 4) ||
             (scrollDirection === 'up' &&
@@ -53,6 +65,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 5)
         ) {
             scroller.scrollTo('model3range', { smooth: true });
+            setActiveElement('model3range');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 5) ||
             (scrollDirection === 'up' &&
@@ -60,6 +73,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 6)
         ) {
             scroller.scrollTo('model3autopilot', { smooth: true });
+            setActiveElement('model3autopilot');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 6) ||
             (scrollDirection === 'up' &&
@@ -67,6 +81,7 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 7)
         ) {
             scroller.scrollTo('model3interior', { smooth: true });
+            setActiveElement('model3interior');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 7) ||
             (scrollDirection === 'up' &&
@@ -74,8 +89,10 @@ const Model3 = () => {
                 offsetY <= window.innerHeight * 8)
         ) {
             scroller.scrollTo('model3specs', { smooth: true });
+            setActiveElement('model3specs');
         } else if (scrollDirection === 'down') {
             scroller.scrollTo('model3order', { smooth: true });
+            setActiveElement('model3order');
         } else {
             console.log('foo');
         }
@@ -99,6 +116,10 @@ const Model3 = () => {
             onWheel={(e) => handleScroll(e)}
             onTouchMove={(e) => handleScroll(e)}
         >
+            <Model3Bars
+                activeElement={activeElement}
+                handleClick={handleBarClick}
+            />
             <Element name="model3main">
                 <Model3Main />
             </Element>
