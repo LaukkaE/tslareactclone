@@ -1,4 +1,8 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import {
+    faPersonShelter,
+    faPlus,
+    faWifi,
+} from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
@@ -22,7 +26,9 @@ const Model3Interior = () => {
                         </div>
                     </div>
                     <div className="background_panels_wifi">
-                        <div className="background_panels_info">wifiicon</div>
+                        <div className="background_panels_info">
+                            {<>{<FontAwesomeIcon icon={faWifi} />}</>}
+                        </div>
                         <div className="background_panels_text">
                             Over-the-air software updates introduce new
                             features, functionality and performance
@@ -30,7 +36,7 @@ const Model3Interior = () => {
                     </div>
                     <div className="background_panels_glass">
                         <div className="background_panels_info">
-                            glassrooficon
+                            {<>{<FontAwesomeIcon icon={faPersonShelter} />}</>}
                         </div>
                         <div className="background_panels_text">
                             An expansive Glass Roof provides more headroom and

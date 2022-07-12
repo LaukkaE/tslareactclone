@@ -1,4 +1,4 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faCamera, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
@@ -30,7 +30,10 @@ const Model3Autopilot = () => {
                         </div>
                     </div>
                     <div className="background_panels_detection">
-                        <div className="background_panels_info">lensimage</div>
+                        <div className="background_panels_info">
+                            {' '}
+                            {<>{<FontAwesomeIcon icon={faCamera} />}</>}
+                        </div>
                         <div className="background_panels_text">
                             Tesla Vision detects nearby cars, helps prevent
                             potential collisions and assists with parking
