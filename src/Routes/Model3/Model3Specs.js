@@ -5,7 +5,7 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/model3specs.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Specs = () => {
+const Model3Specs = ({ active }) => {
     const setModal = useContext(ModalContext);
     const [activeButton, setActiveButton] = useState('performance');
     const [activeSpecs, setActiveSpecs] = useState({});
@@ -62,7 +62,11 @@ const Model3Specs = () => {
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             ></div>
-            <div className="specs_content">
+            <div
+                className={`specs_content ${
+                    active ? 'specs_content_active' : ''
+                }`}
+            >
                 <h2>Model 3 Specs</h2>
                 <div className="specs_content_buttons">
                     <Button

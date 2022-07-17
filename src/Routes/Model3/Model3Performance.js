@@ -5,11 +5,15 @@ import { faStar, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Performance = () => {
+const Model3Performance = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className="model3performance">
+        <div
+            className={`model3performance ${
+                active ? 'model3performance_active' : ''
+            }`}
+        >
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}

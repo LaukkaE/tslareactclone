@@ -5,11 +5,15 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/model3autopilot.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Autopilot = () => {
+const Model3Autopilot = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className="model3autopilot">
+        <div
+            className={`model3autopilot ${
+                active ? 'model3autopilot_active' : ''
+            }`}
+        >
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}

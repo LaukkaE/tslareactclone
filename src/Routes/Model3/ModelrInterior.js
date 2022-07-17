@@ -9,11 +9,13 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/model3interior.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Interior = () => {
+const Model3Interior = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className="model3interior">
+        <div
+            className={`model3interior ${active ? 'model3interior_active' : ''}`}
+        >
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}

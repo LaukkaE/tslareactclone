@@ -1,10 +1,12 @@
+import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Button from '../../components/Button';
 import background from '../../pics/model3/model3awd.jpg';
 
-const Model3AWD = () => {
+const Model3AWD = ({ active }) => {
     return (
-        <div className="model3awd">
+        <div className={`model3awd ${active ? 'model3awd_active' : ''}`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
@@ -26,7 +28,7 @@ const Model3AWD = () => {
                     </div>
                     <div className="background_panels_awd">
                         <div className="background_panels_info">
-                            weathericon
+                            <FontAwesomeIcon icon={faCloudShowersHeavy} />
                         </div>
                         <div className="background_panels_text">
                             Unparalleled traction and control, in all weather

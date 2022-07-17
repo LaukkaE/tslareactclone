@@ -2,14 +2,16 @@ import React from 'react';
 import Button from '../../components/Button';
 import background from '../../pics/model3/Model3Main.jpg';
 
-const Model3Main = () => {
+const Model3Main = ({ active }) => {
     return (
         <div
-            className="model3main model3main_background background"
+            className={`model3main model3main_background background ${
+                active ? 'model3main_active' : ''
+            }`}
             style={{ backgroundImage: `url(${background})` }}
         >
             <p className="introtext">Model 3</p>
-            <div className="infotiles">
+            <div className="background_panels">
                 <div className="info_acceleration">
                     <h1>3.3 s</h1>
                     <p>0-100 km/h</p>

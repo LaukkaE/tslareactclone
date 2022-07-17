@@ -9,6 +9,23 @@
 .model3component::-webkit-scrollbar {
     width: 0;
 }
+/* MAIN KEYFRAMES */
+@keyframes fadeInUp {
+    0% {
+        /* opacity: 0; */
+        transform: translateY(max(50px, 10%));
+    }
+    75% {
+        /* opacity: 0.01; */
+        transform: translateY(max(50px, 10%));
+    }
+    100% {
+        /* opacity: 1; */
+        transform: translateY(0);
+    }
+}
+
+/* MAIN KEYFRAMES END */
 
 /* BARS */
 .bars_white {
@@ -38,8 +55,8 @@
     width: 100%;
     margin-left: 5px;
     font-weight: bold;
-    -webkit-animation: fadeinout 5s linear forwards;
-    animation: fadeinout 5s linear forwards;
+    -webkit-animation: fadeinout 3s linear forwards;
+    animation: fadeinout 3s linear forwards;
 }
 .model3bars .active p:hover {
     opacity: 1 !important;
@@ -106,7 +123,7 @@
     height: 100vh;
 }
 
-.infotiles {
+.model3main .background_panels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
@@ -115,10 +132,43 @@
     margin: auto;
 }
 
-.infotiles p,
-.infotiles h1 {
+.model3main .background_panels p,
+.model3main .background_panels h1 {
     color: white;
     margin-bottom: 0.5rem;
+}
+/* MAIN COMPONENT ANIMATIONS */
+.model3main .introtext,
+.model3main .background_panels {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3main_active .introtext {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3main_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+}
+
+.model3main_active .info_acceleration {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+}
+.model3main_active .info_range {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+}
+.model3main_active .info_awd {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
+}
+.model3main_active .info_button {
+    -webkit-animation: fadeInUp 2s linear forwards;
+    animation: fadeInUp 2s linear forwards;
 }
 /* MAIN COMPONENT END */
 
@@ -133,16 +183,18 @@
     background-size: 100%;
 }
 
-.safety_text {
+.safety_content {
     margin-left: 3rem;
     margin-top: 5rem;
+    display: flex;
+    flex-direction: column;
     /* padding: 1rem; */
 }
-.safety_text p {
+.safety_content p {
     margin-top: 1rem;
     line-height: 1.5;
 }
-.safety_text h3 {
+.safety_content h3 {
     text-align: center;
     letter-spacing: 1.5px;
     margin-top: 2rem;
@@ -154,10 +206,11 @@
 }
 
 .safety_buttons {
-    position: absolute;
     display: flex;
-    top: 190vh;
-    /* text-align: center; */
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    text-align: center;
 }
 
 .safety_buttons p {
@@ -166,6 +219,20 @@
     padding-right: 0.5rem;
 }
 /* SAFETY COMPONENT END */
+/* SAFETY ANIMATIONS */
+.model3safety .safety_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3safety_active .safety_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+}
+.model3safety_active button {
+    opacity: 1;
+}
+
 /* PERFORMANCE COMPONENT */
 
 .model3performance {
@@ -213,6 +280,35 @@
 .model3performance .performance_content_left_buttons p {
     margin: auto 5px;
 }
+/* PERFORMANCE ANIMATIONS */
+.model3performance .background_panels,
+.model3performance .performance_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3performance_active .performance_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3performance_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+}
+
+.model3performance_active .background_panels_acceleration {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+}
+.model3performance_active .background_panels_topspeed {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+}
+.model3performance_active .background_panels_awd {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
+}
 /* PERFORMANCE COMPONENT END */
 /* AWD COMPONENT  */
 
@@ -245,6 +341,35 @@
     grid-template-columns: 1fr 1.5fr;
     max-width: 900px;
     margin: auto;
+}
+/* AWD ANIMATIONS */
+.model3awd .background_panels,
+.model3awd .awd_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3awd_active .awd_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3awd_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+}
+
+.model3awd_active .background_panels_motors {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+}
+.model3awd_active .background_panels_reaction {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+}
+.model3awd_active .background_panels_awd {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
 }
 /* AWD COMPONENT END */
 /* RANGE COMPONENT */
@@ -307,7 +432,35 @@
 .model3range .range_content_buttons p {
     margin: auto 5px;
 }
+/* RANGE ANIMATIONS */
+.model3range .background_panels,
+.model3range .range_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3range_active .range_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3range_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+}
 
+.model3range_active .background_panels_range {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+}
+.model3range_active .background_panels_chargetime {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+}
+.model3range_active .background_panels_superchargers {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
+}
 /* RANGE COMPONENT END */
 /* AUTOPILOT COMPONENT  */
 .model3autopilot {
@@ -366,7 +519,35 @@
 .model3autopilot .autopilot_content_right {
     width: 600px;
 }
+/* AUTOPILOT ANIMATIONS */
+.model3autopilot .background_panels,
+.model3autopilot .autopilot_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3autopilot_active .autopilot_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3autopilot_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+}
 
+.model3autopilot_active .background_panels_degrees {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+}
+.model3autopilot_active .background_panels_meters {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+}
+.model3autopilot_active .background_panels_detection {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
+}
 /* AUTOPILOT COMPONENT END */
 /* INTERIOR COMPONENT  */
 .model3interior {
@@ -427,6 +608,43 @@
 .model3interior .interior_content_right {
     width: 600px;
 }
+/* INTERIOR ANIMATIONS */
+.model3interior .background_panels,
+.model3interior .interior_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+
+.model3interior_active .interior_content {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+}
+.model3interior_active .background_panels {
+    opacity: 1;
+    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+
+    /* -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards; */
+    /* animation-delay: 500ms !important; */
+}
+.model3interior_active .background_panels_inches {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    /* animation-delay: 500ms; */
+}
+.model3interior_active .background_panels_wifi {
+    -webkit-animation: fadeInUp 1.5s linear forwards;
+    animation: fadeInUp 1.5s linear forwards;
+    /* animation-delay: 1000ms; */
+}
+.model3interior_active .background_panels_glass {
+    -webkit-animation: fadeInUp 1.75s linear forwards;
+    animation: fadeInUp 1.75s linear forwards;
+    /* animation-delay: 1500ms; */
+}
+
 /* INTERIOR COMPONENT END */
 /* SPECS COMPONENT  */
 .model3specs {
@@ -439,10 +657,12 @@
 .model3specs .background {
     background-size: 100%;
 }
+
 .model3specs .specs_content {
     position: relative;
     top: 28vh;
 }
+
 .model3specs .specs_content_buttons {
     display: grid;
     grid-template-columns: 250px 250px;
@@ -534,6 +754,16 @@
 #k {
     grid-area: k;
 }
+/* SPECS ANIMATIONS */
+.model3specs .specs_content {
+    opacity: 0;
+    transition: opacity 1.25s ease-in-out;
+}
+.model3specs .specs_content_active {
+    -webkit-animation: fadeInUp 1.25s linear forwards;
+    animation: fadeInUp 1.25s linear forwards;
+    opacity: 1;
+}
 
 /* SPECS COMPONENT END */
 /* ORDER COMPONENT  */
@@ -547,9 +777,10 @@
     grid-template-columns: 500px 1fr;
 
     height: 400px;
-    max-width: 1800px;
+    max-width: 1900px;
     margin: auto 0;
     margin-left: auto;
+
     gap: 10rem;
     flex-grow: 1;
 }
@@ -564,7 +795,8 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: left;
+    margin-left: 5rem;
+    /* align-items: left; */
     /* width: auto; */
 }
 .model3order .order_content_buttons {
@@ -576,4 +808,36 @@
     color: white;
     font-size: 30px;
 }
+/* ORDER ANIMATIONS */
+.order_content_buttons button {
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+.order_content_buttons_active button {
+    -webkit-animation: fadeInUp 1s linear forwards;
+    animation: fadeInUp 1s linear forwards;
+    opacity: 1;
+    transition: opacity 1.5s ease-in-out;
+}
+
 /* ORDER COMPONENT END */
+/* MEDIA QUERIES */
+@media (max-width: 1268px) {
+    .specs_content_buttons {
+        grid-template-columns: 200px 200px !important;
+    }
+    .specs_content_buttons Button {
+        width: 200px;
+    }
+
+    .order_wrapper {
+        grid-template-columns: 400px 1fr !important;
+        gap: 5rem !important;
+    }
+
+    .order_content_buttons {
+        flex-direction: column;
+        gap: 1rem !important;
+    }
+}

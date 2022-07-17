@@ -18,6 +18,12 @@ const Landingpage = () => {
     const scrollRef = useRef(scrollDir);
     const [activeElement, setActiveElement] = useState('modely');
 
+    // force to the start of the page on page switch/load
+    useEffect(() => {
+        scroller.scrollTo('modely');
+        setActiveElement('modely');
+    }, []);
+
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         // console.log('execute');
@@ -61,6 +67,7 @@ const Landingpage = () => {
         // console.log(scrollDir, offsetY, window.innerHeight);
     };
 
+    // chrome scrolling style, firefox scrolling is done differently on teslas own site.
     let timeout = useRef(null);
     const handleScroll = () => {
         clearTimeout(timeout.current);

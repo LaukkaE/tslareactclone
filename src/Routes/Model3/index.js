@@ -28,6 +28,12 @@ const Model3 = () => {
         setActiveElement(target);
     };
 
+    // force to the start of the page on page switch/load
+    useEffect(() => {
+        scroller.scrollTo('model3main');
+        setActiveElement('model3main');
+    }, []);
+
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;
@@ -121,31 +127,51 @@ const Model3 = () => {
                 handleClick={handleBarClick}
             />
             <Element name="model3main">
-                <Model3Main />
+                <Model3Main
+                    active={activeElement === 'model3main' ? true : false}
+                />
             </Element>
             <Element name="model3safety">
-                <Model3Safety />
+                <Model3Safety
+                    active={activeElement === 'model3safety' ? true : false}
+                />
             </Element>
             <Element name="model3performance">
-                <Model3Performance />
+                <Model3Performance
+                    active={
+                        activeElement === 'model3performance' ? true : false
+                    }
+                />
             </Element>
             <Element name="model3awd">
-                <Model3AWD />
+                <Model3AWD
+                    active={activeElement === 'model3awd' ? true : false}
+                />
             </Element>
             <Element name="model3range">
-                <Model3Range />
+                <Model3Range
+                    active={activeElement === 'model3range' ? true : false}
+                />
             </Element>
             <Element name="model3autopilot">
-                <Model3Autopilot />
+                <Model3Autopilot
+                    active={activeElement === 'model3autopilot' ? true : false}
+                />
             </Element>
             <Element name="model3interior">
-                <Model3Interior />
+                <Model3Interior
+                    active={activeElement === 'model3interior' ? true : false}
+                />
             </Element>
             <Element name="model3specs">
-                <Model3Specs />
+                <Model3Specs
+                    active={activeElement === 'model3specs' ? true : false}
+                />
             </Element>
             <Element name="model3order">
-                <Model3Order />
+                <Model3Order
+                    active={activeElement === 'model3order' ? true : false}
+                />
             </Element>
         </div>
     );
