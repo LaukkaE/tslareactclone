@@ -127,7 +127,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     position: relative;
-    top: 90vh;
+    top: 85vh;
     max-width: 700px;
     margin: auto;
 }
@@ -144,32 +144,31 @@
     transition: opacity 1.25s ease-in-out;
 }
 .model3main_active .introtext {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
+    /* -webkit-animation: fadeInUp 0.5s linear forwards; */
+    /* animation: fadeInUp 0.5s linear forwards; */
     opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
 }
 .model3main_active .background_panels {
     opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
+    transition: opacity 1s cubic-bezier(1, 0.07, 1, 1);
 }
 
-.model3main_active .info_acceleration {
+/* .model3main_active .info_acceleration {
+    -webkit-animation: fadeInUp 0.75s linear forwards;
+    animation: fadeInUp 0.75s linear forwards;
+}
+.model3main_active .info_range {
+    -webkit-animation: fadeInUp 1s linear forwards;
+    animation: fadeInUp 1s linear forwards;
+}
+.model3main_active .info_awd {
     -webkit-animation: fadeInUp 1.25s linear forwards;
     animation: fadeInUp 1.25s linear forwards;
 }
-.model3main_active .info_range {
+.model3main_active .info_button {
     -webkit-animation: fadeInUp 1.5s linear forwards;
     animation: fadeInUp 1.5s linear forwards;
-}
-.model3main_active .info_awd {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
-}
-.model3main_active .info_button {
-    -webkit-animation: fadeInUp 2s linear forwards;
-    animation: fadeInUp 2s linear forwards;
-}
+} */
 /* MAIN COMPONENT END */
 
 /* SAFETY COMPONENT */
@@ -339,9 +338,21 @@
 .model3awd .awd_content {
     display: grid;
     grid-template-columns: 1fr 1.5fr;
-    max-width: 900px;
+    max-width: 1100px;
+    height: 100%;
     margin: auto;
 }
+.model3awd .awd_content_left {
+    margin-top: 3rem;
+}
+.model3awd .awd_content_left p,
+.model3awd .awd_content_left h2 {
+    margin-bottom: 0.5rem;
+}
+.model3awd .awd_content_right {
+    margin: auto;
+}
+
 /* AWD ANIMATIONS */
 .model3awd .background_panels,
 .model3awd .awd_content {
