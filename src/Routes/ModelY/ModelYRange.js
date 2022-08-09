@@ -1,38 +1,45 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/model3/model3range.jpg';
+import background from '../../pics/modely/rangevideo.mp4';
 import { ModalContext } from '../../utils/ModalContext';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {
+    faChair,
+    faTruckRampBox,
+    faUniversalAccess,
+} from '@fortawesome/free-solid-svg-icons';
 
-const Model3Range = ({ active }) => {
+const ModelYRange = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`model3range ${active ? 'model3range_active' : ''}`}>
+        <div className={`modelyrange ${active ? 'modelyrange_active' : ''}`}>
             <div
                 className="background"
-                style={{ backgroundImage: `url(${background})` }}
+                // style={{ backgroundImage: `url(${background})` }}
             >
+                <video loop autoPlay muted id="range-video">
+                    <source src={background} type="video/mp4" />
+                </video>
                 <div className="background_panels">
                     <div className="background_panels_range">
-                        <div className="background_panels_info">602 km</div>
+                        <div className="background_panels_info">533 km</div>
                         <div className="background_panels_text">
-                            Go anywhere with up to 602 km of range on a single
-                            charge
+                            Go anywhere with up to 533 km of range (WLTP) on a
+                            single charge{' '}
                         </div>
                     </div>
                     <div className="background_panels_chargetime">
                         <div className="background_panels_info">15 min</div>
                         <div className="background_panels_text">
-                            Recharge up to 275 km in 15 minutes at Supercharger
+                            Recharge up to 241 km in 15 minutes at Supercharger
                             locations
                         </div>
                     </div>
                     <div className="background_panels_superchargers">
                         <div className="background_panels_info">35,000+</div>
                         <div className="background_panels_text">
-                            Superchargers placed along well-traveled routes
+                            Superchargers placed along well- traveled routes
                             around the world
                         </div>
                     </div>
@@ -53,13 +60,6 @@ const Model3Range = ({ active }) => {
                 <div className="range_content_buttons">
                     <Button
                         mode="white"
-                        size="round"
-                        text={<>{<FontAwesomeIcon icon={faPlus} />}</>}
-                        onClick={() => setModal(true)}
-                    ></Button>
-                    <p>LEARN MORE</p>
-                    <Button
-                        mode="white"
                         size="small"
                         text="ORDER NOW"
                         onClick={() => setModal(true)}
@@ -70,4 +70,4 @@ const Model3Range = ({ active }) => {
     );
 };
 
-export default Model3Range;
+export default ModelYRange;

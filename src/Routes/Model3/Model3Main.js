@@ -10,8 +10,11 @@ const Model3Main = ({ active }) => {
 
     // UseEffect to animate acceleration number
     useEffect(() => {
+        // delay the zeroing until acceleration is not seen
         if (!active) {
-            setAcceleration(0);
+            setTimeout(() => {
+                setAcceleration(0);
+            }, 1000);
             return;
         }
         const interval = setInterval(() => {

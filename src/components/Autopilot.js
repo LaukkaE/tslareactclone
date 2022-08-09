@@ -1,19 +1,16 @@
 import { faCamera, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
-import Button from '../../components/Button';
-import background from '../../pics/model3/model3autopilot.jpg';
-import { ModalContext } from '../../utils/ModalContext';
+import Button from './Button';
+import background from '../../src/pics/model3/model3autopilot.jpg';
+import { ModalContext } from '../utils/ModalContext';
+import '../css/Autopilot.css';
 
-const Model3Autopilot = ({ active }) => {
+const Autopilot = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div
-            className={`model3autopilot ${
-                active ? 'model3autopilot_active' : ''
-            }`}
-        >
+        <div className={`autopilot ${active ? 'autopilot_active' : ''}`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
@@ -77,4 +74,4 @@ const Model3Autopilot = ({ active }) => {
     );
 };
 
-export default Model3Autopilot;
+export default Autopilot;

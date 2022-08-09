@@ -5,10 +5,10 @@ import '../../css/Model3.css';
 import Model3Performance from './Model3Performance';
 import Model3AWD from './Model3AWD';
 import Model3Range from './Model3Range';
-import Model3Interior from './ModelrInterior';
 import Model3Specs from './Model3Specs';
 import Model3Order from './Model3Order';
-import Model3Autopilot from './Model3Autopilot';
+import Autopilot from '../../components/Autopilot';
+import Interior from '../../components/Interior';
 import { useScrollDirection } from '../../utils/useScrollDirection';
 import {
     Element,
@@ -154,12 +154,12 @@ const Model3 = () => {
                 />
             </Element>
             <Element name="model3autopilot">
-                <Model3Autopilot
+                <Autopilot
                     active={activeElement === 'model3autopilot' ? true : false}
                 />
             </Element>
             <Element name="model3interior">
-                <Model3Interior
+                <Interior
                     active={activeElement === 'model3interior' ? true : false}
                 />
             </Element>

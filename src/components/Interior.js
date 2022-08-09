@@ -5,16 +5,18 @@ import {
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
-import Button from '../../components/Button';
-import background from '../../pics/model3/model3interior.jpg';
-import { ModalContext } from '../../utils/ModalContext';
+import Button from './Button';
+import background from '../../src/pics/model3/model3interior.jpg';
+import { ModalContext } from '../utils/ModalContext';
 
-const Model3Interior = ({ active }) => {
+const Interior = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
         <div
-            className={`model3interior ${active ? 'model3interior_active' : ''}`}
+            className={`model3interior ${
+                active ? 'model3interior_active' : ''
+            }`}
         >
             <div
                 className="background"
@@ -80,4 +82,4 @@ const Model3Interior = ({ active }) => {
     );
 };
 
-export default Model3Interior;
+export default Interior;
