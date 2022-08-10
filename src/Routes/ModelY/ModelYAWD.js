@@ -32,14 +32,14 @@ const ModelYAWD = ({ active }) => {
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_motors">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info">2</div>
                         <div className="background_panels_text">
                             Independent motors digitally control torque to the
                             front and rear wheels
                         </div>
                     </div>
-                    <div className="background_panels_reaction">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">
                             {acceleration.toPrecision(2)} s
                         </div>
@@ -48,7 +48,7 @@ const ModelYAWD = ({ active }) => {
                             little as 3.7 seconds
                         </div>
                     </div>
-                    <div className="background_panels_awd">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">
                             <FontAwesomeIcon icon={faCloudShowersHeavy} />
                         </div>
@@ -59,7 +59,7 @@ const ModelYAWD = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="awd_content">
+            <div className="awd_content toggleable">
                 <div className="awd_content_left">
                     <p>All-Wheel Drive</p>
                     <h2>Dual Motor</h2>

@@ -1,20 +1,22 @@
 import React from 'react';
 import Button from '../../components/Button';
 import background from '../../pics/modely/modelysafety.avif';
-const ModelYSafety = ({ active }) => {
+const ModelYSafety = () => {
     return (
-        <div className={`modelysafety ${active ? 'modelysafety_active' : ''}`}>
+        <div className={`modelysafety`}>
             <div className="safety_content">
-                <h4>Safety</h4>
-                <h1>Designed for safety</h1>
-                <p>
-                    Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-                    Perferendis nihil soluta ea corporis voluptatum, commodi
-                    molestias laborum sint aliquam quidem incidunt inventore!
-                    Tenetur est porro.
-                </p>
+                <div className="safety_text toggleable">
+                    <h4>Safety</h4>
+                    <h1>Designed for safety</h1>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing
+                        elit. Perferendis nihil soluta ea corporis voluptatum,
+                        commodi molestias laborum sint aliquam quidem incidunt
+                        inventore! Tenetur est porro.
+                    </p>
+                </div>
 
-                <div className="safety_buttons">
+                <div className="safety_buttons toggleable">
                     <Button
                         mode={'white'}
                         text={'ORDER NOW'}

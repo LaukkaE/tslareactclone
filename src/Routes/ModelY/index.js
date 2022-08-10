@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Autopilot from '../../components/Autopilot';
 import Interior from '../../components/Interior';
 import '../../css/ModelY.css';
@@ -10,8 +10,27 @@ import ModelYUtility from './ModelYUtility';
 import ModelYSpecs from './ModelYSpecs';
 
 const ModelY = () => {
+    // Add "animate" class to every "toggleable" class thats inside viewport
+    useEffect(() => {
+        const elements = document.querySelectorAll('.toggleable');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle('animate', entry.isIntersecting);
+            });
+        });
+        elements.forEach((e) => {
+            observer.observe(e);
+        });
+
+        return () => {
+            elements.forEach((e) => {
+                observer.unobserve(e);
+            });
+        };
+    }, []);
+
     return (
-        <div>
+        <div className="modely">
             <ModelYMain />
             <ModelYSafety />
             <ModelYUtility active={true} />

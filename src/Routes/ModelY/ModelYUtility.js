@@ -9,19 +9,17 @@ import {
     faUniversalAccess,
 } from '@fortawesome/free-solid-svg-icons';
 
-const ModelYUtility = ({ active }) => {
+const ModelYUtility = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div
-            className={`modelyutility ${active ? 'modelyutility_active' : ''}`}
-        >
+        <div className={`modelyutility`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_passengers">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info">
                             <FontAwesomeIcon icon={faChair} /> 5
                         </div>
@@ -29,7 +27,7 @@ const ModelYUtility = ({ active }) => {
                             Comfortable seating for five adults
                         </div>
                     </div>
-                    <div className="background_panels_seating">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">
                             {' '}
                             <FontAwesomeIcon icon={faUniversalAccess} />
@@ -39,7 +37,7 @@ const ModelYUtility = ({ active }) => {
                             passengers
                         </div>
                     </div>
-                    <div className="background_panels_cargo">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">
                             <FontAwesomeIcon icon={faTruckRampBox} />
                         </div>
@@ -51,7 +49,7 @@ const ModelYUtility = ({ active }) => {
                 </div>
             </div>
             <div className="utility_content">
-                <div className="utility_content_text">
+                <div className="utility_content_text toggleable">
                     <p>Utility</p>
                     <h2>A Place For Everything</h2>
                     <p>
@@ -62,7 +60,7 @@ const ModelYUtility = ({ active }) => {
                         dolores earum aspernatur, nostrum culpa, esse nobis.
                     </p>
                 </div>
-                <div className="utility_content_buttons">
+                <div className="utility_content_buttons toggleable">
                     <Button
                         mode="white"
                         size="small"

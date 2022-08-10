@@ -1,3 +1,37 @@
+@keyframes fadeInUpv2 {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUpv2 {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1 !important;
+    }
+}
+.toggleable {
+    opacity: 0;
+}
+
+.modely .animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUpv2;
+    -webkit-animation-name: fadeInUpv2;
+}
+
 /* MAIN COMPONENT */
 .modelymain .introtext {
     /* padding-top: 18rem; */
@@ -135,33 +169,14 @@
     margin: auto 5px;
 }
 /* UTILITY ANIMATIONS */
-.modelyutility .background_panels,
-.modelyutility .utility_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
+.modelyutility .background_panels_1 {
+    animation-delay: 0ms;
 }
-.modelyutility_active .utility_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+.modelyutility .background_panels_2 {
+    animation-delay: 125ms;
 }
-.modelyutility_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
-
-.modelyutility_active .background_panels_passengers {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.modelyutility_active .background_panels_seating {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-}
-.modelyutility_active .background_panels_cargo {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
+.modelyutility .background_panels_3 {
+    animation-delay: 250ms;
 }
 /* UTILITY COMPONENT END */
 /* AWD COMPONENT  */
@@ -210,33 +225,15 @@
 }
 
 /* AWD ANIMATIONS */
-.modelyawd .background_panels,
-.modelyawd .awd_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
-}
-.modelyawd_active .awd_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
-}
-.modelyawd_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
 
-.modelyawd_active .background_panels_motors {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
+.modelyawd .background_panels_1 {
+    animation-delay: 0ms;
 }
-.modelyawd_active .background_panels_reaction {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
+.modelyawd .background_panels_2 {
+    animation-delay: 125ms;
 }
-.modelyawd_active .background_panels_awd {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
+.modelyawd .background_panels_3 {
+    animation-delay: 250ms;
 }
 /* AWD COMPONENT END */
 /* RANGE COMPONENT */
@@ -319,39 +316,22 @@
     margin: auto 5px;
 }
 /* RANGE ANIMATIONS */
-.modelyrange .background_panels,
-.modelyrange .range_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
+.modelyrange .background_panels_1 {
+    animation-delay: 0ms;
 }
-.modelyrange_active .range_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
+.modelyrange .background_panels_2 {
+    animation-delay: 125ms;
 }
-.modelyrange_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
-
-.modelyrange_active .background_panels_passengers {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.modelyrange_active .background_panels_chargetime {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-}
-.modelyrange_active .background_panels_superchargers {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
+.modelyrange .background_panels_3 {
+    animation-delay: 250ms;
 }
 /* RANGE COMPONENT END */
 /* SPECS COMPONENT  */
 .modelyspecs {
     background-color: #000;
-    height: 175vh;
+    height: 140vh;
+}
+.modelyspecs .specs_wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10rem;
@@ -364,7 +344,7 @@
 .modelyspecs .specs_content {
     /* position: relative; */
     margin-top: 28vh;
-    max-height: 175vh;
+    max-height: 100%;
 }
 
 .modelyspecs .specs_content_buttons {
@@ -455,15 +435,17 @@
     color: #f8f8f8;
     margin-bottom: 0.5rem;
 }
-/* SPECS ANIMATIONS */
-.modelyspecs .specs_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
+.modelyspecs .specs_order_content {
+    max-width: 600px;
+    text-align: center;
+    margin: 3rem auto;
 }
-.modelyspecs .specs_content_active {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
+.modelyspecs .specs_order_content Button {
+    margin-bottom: 1rem;
+}
+.modelyspecs .specs_order_content p {
+    color: #f8f8f8;
+    font-size: 14px;
 }
 
 /* SPECS COMPONENT END */

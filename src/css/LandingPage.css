@@ -7,7 +7,7 @@
     height: 100vh;
 }
 
-.active {
+.landing .active {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
