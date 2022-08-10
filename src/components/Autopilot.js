@@ -10,27 +10,27 @@ const Autopilot = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`autopilot ${active ? 'autopilot_active' : ''}`}>
+        <div className={`autopilot`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_degrees">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info">360°</div>
                         <div className="background_panels_text">
                             Rear, side and forward-facing cameras provide
                             maximum visibility
                         </div>
                     </div>
-                    <div className="background_panels_meters">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">250 m</div>
                         <div className="background_panels_text">
                             Powerful visual processing at up to 250 meters of
                             range
                         </div>
                     </div>
-                    <div className="background_panels_detection">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">
                             {' '}
                             {<>{<FontAwesomeIcon icon={faCamera} />}</>}
@@ -42,7 +42,7 @@ const Autopilot = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="autopilot_content">
+            <div className="autopilot_content toggleable">
                 <div className="autopilot_content_left">
                     <p>Autopilot</p>
                     <h2>Future of Driving</h2>
