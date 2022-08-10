@@ -3,19 +3,15 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/model3order.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Order = ({ active }) => {
+const Model3Order = () => {
     const setModal = useContext(ModalContext);
 
     return (
         <div className="model3order">
             <div className="order_wrapper">
-                <div className="order_content">
+                <div className="order_content toggleable">
                     <h2>Experience Model 3</h2>
-                    <div
-                        className={`order_content_buttons ${
-                            active ? 'order_content_buttons_active' : ''
-                        }`}
-                    >
+                    <div className={`order_content_buttons`}>
                         <Button
                             text="ORDER NOW"
                             mode="white"

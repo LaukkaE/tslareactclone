@@ -6,25 +6,30 @@
     /* width: 100%; */
     /* height: 100vh; */
 }
-.model3component::-webkit-scrollbar {
-    width: 0;
-}
-/* MAIN KEYFRAMES */
-@keyframes fadeInUp {
-    0% {
-        /* opacity: 0; */
-        transform: translateY(max(50px, 10%));
-    }
-    75% {
-        /* opacity: 0.01; */
-        transform: translateY(max(50px, 10%));
-    }
-    100% {
-        /* opacity: 1; */
-        transform: translateY(0);
-    }
-}
 
+/* MAIN KEYFRAMES */
+
+.model3component .animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUpv2;
+    -webkit-animation-name: fadeInUpv2;
+}
+/* Offset side-by-side panel animations */
+.model3component .background_panels_1 {
+    animation-delay: 0ms;
+}
+.model3component .background_panels_2 {
+    animation-delay: 125ms;
+}
+.model3component .background_panels_3 {
+    animation-delay: 250ms;
+}
+.model3component .background_panels_4 {
+    animation-delay: 375ms;
+}
 /* MAIN KEYFRAMES END */
 
 /* BARS */
@@ -138,37 +143,18 @@
     margin-bottom: 0.5rem;
 }
 /* MAIN COMPONENT ANIMATIONS */
-.model3main .introtext,
-.model3main .background_panels {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
+.model3main .background_panels_1 {
+    animation-delay: 0ms;
 }
-.model3main_active .introtext {
-    /* -webkit-animation: fadeInUp 0.5s linear forwards; */
-    /* animation: fadeInUp 0.5s linear forwards; */
-    opacity: 1;
+.model3main .background_panels_2 {
+    animation-delay: 125ms;
 }
-.model3main_active .background_panels {
-    opacity: 1;
-    transition: opacity 1s cubic-bezier(1, 0.07, 1, 1);
+.model3main .background_panels_3 {
+    animation-delay: 250ms;
 }
-
-/* .model3main_active .info_acceleration {
-    -webkit-animation: fadeInUp 0.75s linear forwards;
-    animation: fadeInUp 0.75s linear forwards;
+.model3main .background_panels_4 {
+    animation-delay: 375ms;
 }
-.model3main_active .info_range {
-    -webkit-animation: fadeInUp 1s linear forwards;
-    animation: fadeInUp 1s linear forwards;
-}
-.model3main_active .info_awd {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.model3main_active .info_button {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-} */
 /* MAIN COMPONENT END */
 
 /* SAFETY COMPONENT */
@@ -219,18 +205,6 @@
 }
 /* SAFETY COMPONENT END */
 /* SAFETY ANIMATIONS */
-.model3safety .safety_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
-}
-.model3safety_active .safety_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-}
-.model3safety_active button {
-    opacity: 1;
-}
 
 /* PERFORMANCE COMPONENT */
 
@@ -280,34 +254,7 @@
     margin: auto 5px;
 }
 /* PERFORMANCE ANIMATIONS */
-.model3performance .background_panels,
-.model3performance .performance_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
-}
-.model3performance_active .performance_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
-}
-.model3performance_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
 
-.model3performance_active .background_panels_acceleration {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.model3performance_active .background_panels_topspeed {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-}
-.model3performance_active .background_panels_awd {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
-}
 /* PERFORMANCE COMPONENT END */
 /* AWD COMPONENT  */
 
@@ -355,34 +302,7 @@
 }
 
 /* AWD ANIMATIONS */
-.model3awd .background_panels,
-.model3awd .awd_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
-}
-.model3awd_active .awd_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
-}
-.model3awd_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
 
-.model3awd_active .background_panels_motors {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.model3awd_active .background_panels_reaction {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-}
-.model3awd_active .background_panels_awd {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
-}
 /* AWD COMPONENT END */
 /* RANGE COMPONENT */
 .model3range {
@@ -446,34 +366,7 @@
     margin: auto 5px;
 }
 /* RANGE ANIMATIONS */
-.model3range .background_panels,
-.model3range .range_content {
-    opacity: 0;
-    transition: opacity 1.25s ease-in-out;
-}
-.model3range_active .range_content {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-    opacity: 1;
-    transition: opacity 1.25s cubic-bezier(1, 0.07, 1, 1);
-}
-.model3range_active .background_panels {
-    opacity: 1;
-    transition: opacity 2s cubic-bezier(1, 0.07, 1, 1);
-}
 
-.model3range_active .background_panels_range {
-    -webkit-animation: fadeInUp 1.25s linear forwards;
-    animation: fadeInUp 1.25s linear forwards;
-}
-.model3range_active .background_panels_chargetime {
-    -webkit-animation: fadeInUp 1.5s linear forwards;
-    animation: fadeInUp 1.5s linear forwards;
-}
-.model3range_active .background_panels_superchargers {
-    -webkit-animation: fadeInUp 1.75s linear forwards;
-    animation: fadeInUp 1.75s linear forwards;
-}
 /* RANGE COMPONENT END */
 /* AUTOPILOT COMPONENT  */
 
@@ -642,17 +535,6 @@
     font-size: 30px;
 }
 /* ORDER ANIMATIONS */
-.order_content_buttons button {
-    opacity: 0;
-    transition: opacity 1.5s ease-in-out;
-}
-
-.order_content_buttons_active button {
-    -webkit-animation: fadeInUp 1s linear forwards;
-    animation: fadeInUp 1s linear forwards;
-    opacity: 1;
-    transition: opacity 1.5s ease-in-out;
-}
 
 /* ORDER COMPONENT END */
 /* MEDIA QUERIES */

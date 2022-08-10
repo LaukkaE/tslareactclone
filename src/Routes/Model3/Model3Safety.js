@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';
 
-const Model3Safety = ({ active }) => {
+const Model3Safety = () => {
     const occupantArray = [
         'Adult Occupant',
         'Child Occupant',
@@ -12,8 +12,8 @@ const Model3Safety = ({ active }) => {
         'Safety assist',
     ];
     return (
-        <div className={`model3safety ${active ? 'model3safety_active' : ''}`}>
-            <div className="safety_content">
+        <div className={`model3safety`}>
+            <div className="safety_content toggleable">
                 <h4>Safety</h4>
                 <h1>Built for safety</h1>
                 <p>
@@ -57,7 +57,7 @@ const Model3Safety = ({ active }) => {
                         );
                     })}
                 </div>
-                <div className="safety_buttons">
+                <div className="safety_buttons toggleable">
                     <Button
                         mode={'white'}
                         text={<>{<FontAwesomeIcon icon={faPlus} />}</>}

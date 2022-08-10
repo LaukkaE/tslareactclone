@@ -5,31 +5,31 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/model3range.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Range = ({ active }) => {
+const Model3Range = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`model3range ${active ? 'model3range_active' : ''}`}>
+        <div className={`model3range `}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_range">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info">602 km</div>
                         <div className="background_panels_text">
                             Go anywhere with up to 602 km of range on a single
                             charge
                         </div>
                     </div>
-                    <div className="background_panels_chargetime">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">15 min</div>
                         <div className="background_panels_text">
                             Recharge up to 275 km in 15 minutes at Supercharger
                             locations
                         </div>
                     </div>
-                    <div className="background_panels_superchargers">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">35,000+</div>
                         <div className="background_panels_text">
                             Superchargers placed along well-traveled routes
@@ -38,8 +38,8 @@ const Model3Range = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="range_content">
-                <div className="range_content_text">
+            <div className="range_content ">
+                <div className="range_content_text toggleable">
                     <p>Range</p>
                     <h2>Go Anywhere</h2>
                     <p>
@@ -50,7 +50,7 @@ const Model3Range = ({ active }) => {
                         dolores earum aspernatur, nostrum culpa, esse nobis.
                     </p>
                 </div>
-                <div className="range_content_buttons">
+                <div className="range_content_buttons toggleable">
                     <Button
                         mode="white"
                         size="round"

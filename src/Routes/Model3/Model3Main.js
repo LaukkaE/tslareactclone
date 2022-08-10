@@ -31,26 +31,24 @@ const Model3Main = ({ active }) => {
 
     return (
         <div
-            className={`model3main model3main_background background ${
-                active ? 'model3main_active' : ''
-            }`}
+            className={`model3main model3main_background background`}
             style={{ backgroundImage: `url(${background})` }}
         >
-            <p className="introtext">Model 3</p>
+            <p className="introtext toggleable">Model 3</p>
             <div className="background_panels">
-                <div className="info_acceleration">
+                <div className="background_panels_1 toggleable">
                     <h1>{acceleration.toPrecision(2)} s</h1>
                     <p>0-100 km/h</p>
                 </div>
-                <div className="info_range">
+                <div className="background_panels_2 toggleable">
                     <h1>602km</h1>
                     <p>Range (WLTP)</p>
                 </div>
-                <div className="info_awd">
+                <div className="background_panels_3 toggleable">
                     <h1>AWD</h1>
                     <p>Dual Motor</p>
                 </div>
-                <div className="info_button">
+                <div className="background_panels_4 toggleable">
                     <Button
                         text="ORDER NOW"
                         mode="transparent"

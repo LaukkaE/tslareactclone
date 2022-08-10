@@ -9,31 +9,27 @@ const Model3Performance = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div
-            className={`model3performance ${
-                active ? 'model3performance_active' : ''
-            }`}
-        >
+        <div className={`model3performance`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_acceleration">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info"> 3.3s</div>
                         <div className="background_panels_text">
                             Quickest acceleration—from 0 - 100 km/h* in as
                             little as 3.3 seconds
                         </div>
                     </div>
-                    <div className="background_panels_topspeed">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">261 km/h</div>
                         <div className="background_panels_text">
                             Improved handling and aerodynamics allow for a top
                             speed of 261 km/h
                         </div>
                     </div>
-                    <div className="background_panels_awd">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">AWD</div>
                         <div className="background_panels_text">
                             Dual Motor All-Wheel Drive instantly controls
@@ -42,7 +38,7 @@ const Model3Performance = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="performance_content">
+            <div className="performance_content toggleable">
                 <div className="performance_content_left">
                     <div className="performance_content_left_text">
                         <p>Performance</p>

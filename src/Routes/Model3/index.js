@@ -34,6 +34,25 @@ const Model3 = () => {
         setActiveElement('model3main');
     }, []);
 
+    // Add "animate" class to every "toggleable" class thats inside viewport
+    useEffect(() => {
+        const elements = document.querySelectorAll('.toggleable');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                entry.target.classList.toggle('animate', entry.isIntersecting);
+            });
+        });
+        elements.forEach((e) => {
+            observer.observe(e);
+        });
+
+        return () => {
+            elements.forEach((e) => {
+                observer.unobserve(e);
+            });
+        };
+    }, []);
+
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;

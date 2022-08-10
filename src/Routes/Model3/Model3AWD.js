@@ -6,27 +6,27 @@ import background from '../../pics/model3/model3awd.jpg';
 
 const Model3AWD = ({ active }) => {
     return (
-        <div className={`model3awd ${active ? 'model3awd_active' : ''}`}>
+        <div className={`model3awd`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
             >
                 <div className="background_panels">
-                    <div className="background_panels_motors">
+                    <div className="background_panels_1 toggleable">
                         <div className="background_panels_info">2</div>
                         <div className="background_panels_text">
                             Independent motors digitally control torque to the
                             front and rear wheels
                         </div>
                     </div>
-                    <div className="background_panels_reaction">
+                    <div className="background_panels_2 toggleable">
                         <div className="background_panels_info">10 ms</div>
                         <div className="background_panels_text">
                             Dual motors respond to changing conditions in as
                             little as 10 milliseconds
                         </div>
                     </div>
-                    <div className="background_panels_awd">
+                    <div className="background_panels_3 toggleable">
                         <div className="background_panels_info">
                             <FontAwesomeIcon icon={faCloudShowersHeavy} />
                         </div>
@@ -37,7 +37,7 @@ const Model3AWD = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="awd_content">
+            <div className="awd_content toggleable">
                 <div className="awd_content_left">
                     <p>All-Wheel Drive</p>
                     <h2>Dual Motor</h2>
