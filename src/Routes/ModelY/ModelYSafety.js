@@ -3,8 +3,8 @@ import Button from '../../components/Button';
 import background from '../../pics/modely/modelysafety.avif';
 const ModelYSafety = () => {
     return (
-        <div className={`modelysafety`}>
-            <div className="safety_content">
+        <div className={`modelysafety vertical_wrapper_left`}>
+            <div className="safety_content vertical_content">
                 <div className="safety_text toggleable">
                     <h4>Safety</h4>
                     <h1>Designed for safety</h1>

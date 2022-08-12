@@ -6,7 +6,7 @@ import background from '../../pics/model3/model3awd.jpg';
 
 const Model3AWD = ({ active }) => {
     return (
-        <div className={`model3awd`}>
+        <div className={`model3awd horizontal_wrapper`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
@@ -37,7 +37,7 @@ const Model3AWD = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="awd_content toggleable">
+            <div className="awd_content horizontal_content toggleable">
                 <div className="awd_content_left">
                     <p>All-Wheel Drive</p>
                     <h2>Dual Motor</h2>

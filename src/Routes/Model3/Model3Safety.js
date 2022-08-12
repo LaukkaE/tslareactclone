@@ -12,8 +12,8 @@ const Model3Safety = () => {
         'Safety assist',
     ];
     return (
-        <div className={`model3safety`}>
-            <div className="safety_content toggleable">
+        <div className={`model3safety vertical_wrapper_left`}>
+            <div className="safety_content toggleable vertical_content">
                 <h4>Safety</h4>
                 <h1>Built for safety</h1>
                 <p>

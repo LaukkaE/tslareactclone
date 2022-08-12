@@ -30,15 +30,15 @@ const ModelY = () => {
     }, []);
 
     return (
-        <div className="modely">
+        <div className="modelycomponent">
             <ModelYMain />
             <ModelYSafety />
-            <ModelYUtility active={true} />
-            <ModelYAWD active={true} />
-            <ModelYRange active={true} />
-            <Autopilot active={true} />
-            <Interior active={true} />
-            <ModelYSpecs active={true} />
+            <ModelYUtility />
+            <ModelYAWD />
+            <ModelYRange />
+            <Autopilot />
+            <Interior />
+            <ModelYSpecs />
         </div>
     );
 };

@@ -151,46 +151,28 @@ const Model3 = () => {
                 />
             </Element>
             <Element name="model3safety">
-                <Model3Safety
-                    active={activeElement === 'model3safety' ? true : false}
-                />
+                <Model3Safety />
             </Element>
             <Element name="model3performance">
-                <Model3Performance
-                    active={
-                        activeElement === 'model3performance' ? true : false
-                    }
-                />
+                <Model3Performance />
             </Element>
             <Element name="model3awd">
-                <Model3AWD
-                    active={activeElement === 'model3awd' ? true : false}
-                />
+                <Model3AWD />
             </Element>
             <Element name="model3range">
-                <Model3Range
-                    active={activeElement === 'model3range' ? true : false}
-                />
+                <Model3Range />
             </Element>
             <Element name="model3autopilot">
-                <Autopilot
-                    active={activeElement === 'model3autopilot' ? true : false}
-                />
+                <Autopilot />
             </Element>
             <Element name="model3interior">
-                <Interior
-                    active={activeElement === 'model3interior' ? true : false}
-                />
+                <Interior />
             </Element>
             <Element name="model3specs">
-                <Model3Specs
-                    active={activeElement === 'model3specs' ? true : false}
-                />
+                <Model3Specs />
             </Element>
             <Element name="model3order">
-                <Model3Order
-                    active={activeElement === 'model3order' ? true : false}
-                />
+                <Model3Order />
             </Element>
         </div>
     );

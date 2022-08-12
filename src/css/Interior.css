@@ -1,21 +1,22 @@
-.interior {
-    height: 100vh;
+.interior .horizontal_wrapper {
+    height: max(600px, 100vh);
     display: grid;
     grid-template-rows: 1fr 220px;
-    position: relative;
+}
+.interior .background {
+    display: flex;
 }
 
 .interior .background_panels {
-    height: 100%;
     width: 300px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    right: 0px;
-    gap: 8rem;
-    color: white;
+    /* justify-content: center; */
+    margin: auto 0;
     margin-left: auto;
-    margin-right: 3rem;
+    margin-right: 2rem;
+    gap: 5vh;
+    color: white;
 }
 
 .interior .background_panels_info {
@@ -24,21 +25,18 @@
     margin-bottom: 5px;
 }
 .interior .interior_content {
-    display: flex;
-    /* grid-template-columns: 1fr 1.5fr; */
-    /* width: 100%; */
-    /* margin: auto; */
-    justify-content: center;
-    margin-top: 2.5rem;
-    gap: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
 }
 .interior .interior_content_left {
-    width: 400px;
+    margin-top: 3rem;
 }
 
 .interior .interior_content_left h2 {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 .interior .interior_content_left_buttons p {
     margin: auto 5px;
@@ -54,7 +52,7 @@
     /* margin: auto; */
 }
 .interior .interior_content_right {
-    width: 600px;
+    margin: auto;
 }
 /* ANIMATIONS */
 .interior .background_panels_1 {

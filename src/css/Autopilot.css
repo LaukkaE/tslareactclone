@@ -1,20 +1,20 @@
-.autopilot {
-    height: 100vh;
+.autopilot .horizontal_wrapper {
+    height: max(600px, 100vh);
     display: grid;
     grid-template-rows: 1fr 220px;
 }
 .autopilot .background {
     width: auto;
+    display: flex;
 }
 .autopilot .background_panels {
-    height: 100%;
     width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin: auto 0;
     margin-left: 3rem;
-    gap: 8rem;
+    gap: 5vh;
 }
 
 .autopilot .background_panels_info {
@@ -22,37 +22,30 @@
     font-weight: bold;
 }
 .autopilot .autopilot_content {
-    display: flex;
-    /* grid-template-columns: 1fr 1.5fr; */
-    /* width: 100%; */
-    /* margin: auto; */
-    justify-content: center;
-    margin-top: 2.5rem;
-    gap: 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
 }
 .autopilot .autopilot_content_left {
-    width: 400px;
+    margin-top: 3rem;
 }
 
 .autopilot .autopilot_content_left h2 {
-    margin-top: 1rem;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
 }
 .autopilot .autopilot_content_left_buttons p {
+    /* margin-bottom: 0.5rem; */
     margin: auto 5px;
 }
 
 .autopilot .autopilot_content_left_buttons {
     display: flex;
     text-align: center;
-    /* justify-content: center; */
-    /* position: absolute; */
-    /* bottom: 2rem; */
-    /* width: 100%; */
-    /* margin: auto; */
 }
 .autopilot .autopilot_content_right {
-    width: 600px;
+    margin: auto;
 }
 /* AUTOPILOT ANIMATIONS */
 .autopilot .background_panels_1 {

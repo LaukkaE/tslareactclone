@@ -19,11 +19,47 @@
         opacity: 1 !important;
     }
 }
+
+/* COMMON */
+
+.modelycomponent .horizontal_wrapper {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-rows: 1fr 220px;
+}
+.modelycomponent .vertical_wrapper_left {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-columns: 420px 1fr;
+}
+.modelycomponent .vertical_wrapper_right {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-columns: 1fr 420px;
+}
+
+.modelycomponent .vertical_content {
+    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.modelycomponent .horizontal_content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    padding-top: 3rem;
+}
+
 .toggleable {
     opacity: 0;
 }
 
-.modely .animate {
+.modelycomponent .animate {
     animation-duration: 1s;
     animation-fill-mode: both;
     -webkit-animation-duration: 1s;
@@ -32,29 +68,38 @@
     -webkit-animation-name: fadeInUpv2;
 }
 
+.modelycomponent .background_panels_1 {
+    animation-delay: 0ms;
+}
+.modelycomponent .background_panels_2 {
+    animation-delay: 125ms;
+}
+.modelycomponent .background_panels_3 {
+    animation-delay: 250ms;
+}
+
 /* MAIN COMPONENT */
 .modelymain .introtext {
-    /* padding-top: 18rem; */
-    margin: 0 auto;
     font-size: 40px;
     font-weight: bold;
     color: white;
-    position: relative;
-    top: 16vh;
+    position: absolute;
     max-width: 300px;
-    text-align: center;
+    margin-top: 15vh;
 }
 .modelymain_background {
-    height: 100vh;
+    height: max(600px, 100vh);
+    display: flex;
+    justify-content: center;
 }
 
 .modelymain .background_panels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    position: relative;
-    top: 88vh;
+    /* position: relative; */
     max-width: 700px;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: 4rem;
 }
 
 .modelymain .background_panels p,
@@ -64,11 +109,6 @@
 }
 /* MAIN COMPONENT END */
 /* SAFETY COMPONENT */
-.modelysafety {
-    display: grid;
-    grid-template-columns: 400px 1fr;
-    height: 100vh;
-}
 
 /* background gradient behind image */
 .modelysafety .background {
@@ -85,16 +125,8 @@
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: center center;
-    /* background-size: cover; */
 }
 
-.modelysafety .safety_content {
-    margin-left: 3rem;
-    margin-top: 5rem;
-    display: flex;
-    flex-direction: column;
-    /* padding: 1rem; */
-}
 .modelysafety .safety_content p {
     margin-top: 1rem;
     line-height: 1.5;
@@ -109,18 +141,17 @@
 }
 /* SAFETY COMPONENT END */
 /* UTILITY COMPONENT */
-.modelyutility {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 400px;
+.modelyutility .background {
+    display: flex;
 }
+
 .modelyutility .background_panels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    top: 90%;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 2rem;
     color: white;
 }
 
@@ -134,18 +165,6 @@
     text-align: center;
 }
 
-.modelyutility .utility_content {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-    position: relative;
-}
-
-.modelyutility .utility_content_text {
-    margin-left: 2rem;
-    margin-top: 3rem;
-}
-
 .modelyutility .utility_content_text h2 {
     margin-top: 0.5rem;
     margin-bottom: 1rem;
@@ -156,43 +175,28 @@
 }
 
 .modelyutility .utility_content_buttons {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
-    margin: auto;
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
 }
 
 .modelyutility .utility_content_buttons p {
     margin: auto 5px;
 }
 /* UTILITY ANIMATIONS */
-.modelyutility .background_panels_1 {
-    animation-delay: 0ms;
-}
-.modelyutility .background_panels_2 {
-    animation-delay: 125ms;
-}
-.modelyutility .background_panels_3 {
-    animation-delay: 250ms;
-}
+
 /* UTILITY COMPONENT END */
 /* AWD COMPONENT  */
-
-.modelyawd {
-    height: 100vh;
-    display: grid;
-    grid-template-rows: 1fr 220px;
+.modelyawd .background {
+    display: flex;
 }
 .modelyawd .background_panels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    position: relative;
-    top: 90%;
     max-width: 900px;
-    margin: auto;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 2rem;
     color: white;
     gap: 1rem;
 }
@@ -206,35 +210,15 @@
     text-align: center;
 }
 
-.modelyawd .awd_content {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    max-width: 1100px;
-    height: 100%;
-    margin: auto;
-}
-.modelyawd .awd_content_left {
-    margin-top: 3rem;
-}
+
 .modelyawd .awd_content_left p,
 .modelyawd .awd_content_left h2 {
     margin-bottom: 0.5rem;
 }
-.modelyawd .awd_content_right {
-    margin: auto;
-}
+
 
 /* AWD ANIMATIONS */
 
-.modelyawd .background_panels_1 {
-    animation-delay: 0ms;
-}
-.modelyawd .background_panels_2 {
-    animation-delay: 125ms;
-}
-.modelyawd .background_panels_3 {
-    animation-delay: 250ms;
-}
 /* AWD COMPONENT END */
 /* RANGE COMPONENT */
 #range-video {
@@ -244,22 +228,11 @@
     width: 100%;
     max-height: 100vh;
     z-index: -155;
-
-    /* position: relative; */
-    /* top: 0; */
-    /* left: 0; */
 }
 
-.modelyrange {
-    height: 100vh;
-    display: grid;
-    grid-template-columns: 1fr 420px;
-}
 .modelyrange .background_panels {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    /* position: absolute; */
-    /* top: 98%; */
     max-width: 900px;
     margin: auto;
     color: white;
@@ -270,6 +243,7 @@
 }
 .modelyrange .background {
     height: 100vh;
+    /* display: flex; */
 }
 .modelyrange .background_panels_info {
     text-align: center;
@@ -279,18 +253,6 @@
 }
 .modelyrange .background_panels_text {
     text-align: center;
-}
-
-.modelyrange .range_content {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    position: relative;
-}
-
-.modelyrange .range_content_text {
-    margin-left: 2rem;
-    margin-top: 3rem;
 }
 
 .modelyrange .range_content_text h2 {
@@ -303,33 +265,20 @@
 }
 
 .modelyrange .range_content_buttons {
-    display: flex;
-    text-align: center;
-    justify-content: center;
-    position: absolute;
-    bottom: 2rem;
-    width: 100%;
-    margin: auto;
+    margin-bottom: 2.5rem;
+    margin-top: auto;
 }
 
 .modelyrange .range_content_buttons p {
     margin: auto 5px;
 }
 /* RANGE ANIMATIONS */
-.modelyrange .background_panels_1 {
-    animation-delay: 0ms;
-}
-.modelyrange .background_panels_2 {
-    animation-delay: 125ms;
-}
-.modelyrange .background_panels_3 {
-    animation-delay: 250ms;
-}
+
 /* RANGE COMPONENT END */
 /* SPECS COMPONENT  */
 .modelyspecs {
     background-color: #000;
-    height: 140vh;
+    min-height: max(150vh, 900px);
 }
 .modelyspecs .specs_wrapper {
     display: grid;
@@ -342,7 +291,6 @@
 }
 
 .modelyspecs .specs_content {
-    /* position: relative; */
     margin-top: 28vh;
     max-height: 100%;
 }

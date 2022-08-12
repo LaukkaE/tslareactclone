@@ -14,7 +14,7 @@ const Interior = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`interior`}>
+        <div className={`interior horizontal_wrapper`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}

@@ -6,11 +6,11 @@ import background from '../../src/pics/model3/model3autopilot.jpg';
 import { ModalContext } from '../utils/ModalContext';
 import '../css/Autopilot.css';
 
-const Autopilot = ({ active }) => {
+const Autopilot = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`autopilot`}>
+        <div className={`autopilot horizontal_wrapper`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}

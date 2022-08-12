@@ -7,7 +7,7 @@ const ModelYRange = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`modelyrange`}>
+        <div className={`modelyrange vertical_wrapper_right`}>
             <div
                 className="background"
                 // style={{ backgroundImage: `url(${background})` }}
@@ -39,7 +39,7 @@ const ModelYRange = () => {
                     </div>
                 </div>
             </div>
-            <div className="range_content">
+            <div className="range_content vertical_content">
                 <div className="range_content_text toggleable">
                     <p>Range</p>
                     <h2>Go Anywhere</h2>

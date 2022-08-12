@@ -13,7 +13,7 @@ const ModelYUtility = () => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`modelyutility`}>
+        <div className={`modelyutility vertical_wrapper_right`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
@@ -48,7 +48,7 @@ const ModelYUtility = () => {
                     </div>
                 </div>
             </div>
-            <div className="utility_content">
+            <div className="utility_content vertical_content">
                 <div className="utility_content_text toggleable">
                     <p>Utility</p>
                     <h2>A Place For Everything</h2>

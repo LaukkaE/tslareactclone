@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import background from '../../pics/model3/model3performance.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';
 import { ModalContext } from '../../utils/ModalContext';
 
@@ -9,7 +9,7 @@ const Model3Performance = ({ active }) => {
     const setModal = useContext(ModalContext);
 
     return (
-        <div className={`model3performance`}>
+        <div className={`model3performance horizontal_wrapper`}>
             <div
                 className="background"
                 style={{ backgroundImage: `url(${background})` }}
@@ -38,7 +38,7 @@ const Model3Performance = ({ active }) => {
                     </div>
                 </div>
             </div>
-            <div className="performance_content toggleable">
+            <div className="performance_content horizontal_content toggleable">
                 <div className="performance_content_left">
                     <div className="performance_content_left_text">
                         <p>Performance</p>
