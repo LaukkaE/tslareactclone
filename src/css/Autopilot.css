@@ -27,6 +27,9 @@
     max-width: 1100px;
     height: 100%;
     margin: auto;
+    gap: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 .autopilot .autopilot_content_left {
     margin-top: 3rem;
@@ -37,6 +40,7 @@
 }
 .autopilot .autopilot_content_left_buttons p {
     /* margin-bottom: 0.5rem; */
+    white-space: nowrap;
     margin: auto 5px;
 }
 

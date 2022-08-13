@@ -9,7 +9,7 @@ import Model3Specs from './Model3Specs';
 import Model3Order from './Model3Order';
 import Autopilot from '../../components/Autopilot';
 import Interior from '../../components/Interior';
-import { useScrollDirection } from '../../utils/useScrollDirection';
+import { useScrollDirection } from '../../hooks/useScrollDirection';
 import {
     Element,
     // animateScroll as scroll,
@@ -17,11 +17,15 @@ import {
 } from 'react-scroll';
 import Model3Bars from './Model3Bars';
 import { useState } from 'react';
+import { useIntersectionObs } from '../../hooks/useIntersectionObs';
+import { useMobileMode } from '../../hooks/useMobileMode';
 
 const Model3 = () => {
     const scrollDir = useScrollDirection();
     const scrollRef = useRef(scrollDir);
     const [activeElement, setActiveElement] = useState('model3main');
+    const mobileMode = useMobileMode();
+    useIntersectionObs('.toggleable', mobileMode);
 
     const handleBarClick = (target) => {
         scroller.scrollTo(target, { smooth: true });
@@ -32,25 +36,6 @@ const Model3 = () => {
     useEffect(() => {
         scroller.scrollTo('model3main');
         setActiveElement('model3main');
-    }, []);
-
-    // Add "animate" class to every "toggleable" class thats inside viewport
-    useEffect(() => {
-        const elements = document.querySelectorAll('.toggleable');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                entry.target.classList.toggle('animate', entry.isIntersecting);
-            });
-        });
-        elements.forEach((e) => {
-            observer.observe(e);
-        });
-
-        return () => {
-            elements.forEach((e) => {
-                observer.unobserve(e);
-            });
-        };
     }, []);
 
     const executeScroll = () => {
@@ -151,7 +136,7 @@ const Model3 = () => {
                 />
             </Element>
             <Element name="model3safety">
-                <Model3Safety />
+                <Model3Safety mobile={mobileMode} />
             </Element>
             <Element name="model3performance">
                 <Model3Performance />
@@ -160,7 +145,7 @@ const Model3 = () => {
                 <Model3AWD />
             </Element>
             <Element name="model3range">
-                <Model3Range />
+                <Model3Range mobile={mobileMode} />
             </Element>
             <Element name="model3autopilot">
                 <Autopilot />

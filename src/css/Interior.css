@@ -30,6 +30,9 @@
     max-width: 1100px;
     height: 100%;
     margin: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
 }
 .interior .interior_content_left {
     margin-top: 3rem;
@@ -40,6 +43,7 @@
 }
 .interior .interior_content_left_buttons p {
     margin: auto 5px;
+    white-space: nowrap;
 }
 
 .interior .interior_content_left_buttons {

@@ -8,34 +8,20 @@ import ModelYRange from './ModelYRange';
 import ModelYSafety from './ModelYSafety';
 import ModelYUtility from './ModelYUtility';
 import ModelYSpecs from './ModelYSpecs';
+import { useIntersectionObs } from '../../hooks/useIntersectionObs';
+import { useMobileMode } from '../../hooks/useMobileMode';
 
 const ModelY = () => {
-    // Add "animate" class to every "toggleable" class thats inside viewport
-    useEffect(() => {
-        const elements = document.querySelectorAll('.toggleable');
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry) => {
-                entry.target.classList.toggle('animate', entry.isIntersecting);
-            });
-        });
-        elements.forEach((e) => {
-            observer.observe(e);
-        });
-
-        return () => {
-            elements.forEach((e) => {
-                observer.unobserve(e);
-            });
-        };
-    }, []);
+    const mobileMode = useMobileMode();
+    useIntersectionObs('.toggleable', mobileMode);
 
     return (
         <div className="modelycomponent">
             <ModelYMain />
-            <ModelYSafety />
-            <ModelYUtility />
+            <ModelYSafety mobile={mobileMode} />
+            <ModelYUtility mobile={mobileMode} />
             <ModelYAWD />
-            <ModelYRange />
+            <ModelYRange mobile={mobileMode} />
             <Autopilot />
             <Interior />
             <ModelYSpecs />

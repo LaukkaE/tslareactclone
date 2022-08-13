@@ -3,31 +3,38 @@ import Button from '../../components/Button';
 import background from '../../pics/model3/Model3Main.jpg';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Main = ({ active }) => {
+const Model3Main = () => {
     const setModal = useContext(ModalContext);
 
     const [acceleration, setAcceleration] = useState(0);
-
-    // UseEffect to animate acceleration number
+    // useEffect to animate acceleration while inside viewport
     useEffect(() => {
-        // delay the zeroing until acceleration is not seen
-        if (!active) {
-            setTimeout(() => {
-                setAcceleration(0);
-            }, 1000);
-            return;
-        }
-        const interval = setInterval(() => {
-            if (acceleration >= 3.3) {
-                clearInterval(interval);
-                return;
-            }
-            setAcceleration((prev) => prev + 0.1);
-        }, 50);
+        let interval;
+        const accDiv = document.querySelector('.model3_main_acceleration');
+        const accObs = new IntersectionObserver((e) => {
+            e.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    interval = setInterval(() => {
+                        if (acceleration >= 3.3) {
+                            clearInterval(interval);
+                            return;
+                        }
+                        setAcceleration((prev) => prev + 0.1);
+                    }, 50);
+                } else {
+                    clearInterval(interval);
+                    setAcceleration(0);
+                }
+            });
+        });
+
+        accObs.observe(accDiv);
+
         return () => {
+            accObs.unobserve(accDiv);
             clearInterval(interval);
         };
-    }, [active, acceleration]);
+    }, [acceleration]);
 
     return (
         <div
@@ -36,7 +43,7 @@ const Model3Main = ({ active }) => {
         >
             <p className="introtext toggleable">Model 3</p>
             <div className="background_panels">
-                <div className="background_panels_1 toggleable">
+                <div className="background_panels_1 model3_main_acceleration toggleable">
                     <h1>{acceleration.toPrecision(2)} s</h1>
                     <p>0-100 km/h</p>
                 </div>

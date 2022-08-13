@@ -30,6 +30,9 @@
     height: 100%;
     margin: auto;
     padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    gap: 1rem;
 }
 
 .model3component .animate {
@@ -188,9 +191,12 @@
     line-height: 1.5;
 }
 .model3safety .safety_content h3 {
-    text-align: center;
     letter-spacing: 1.5px;
+    text-align: center;
     margin-top: 2rem;
+}
+.model3safety .safety_content h2 {
+    margin-bottom: 1rem;
 }
 
 .model3safety .occupant_div {
@@ -207,7 +213,7 @@
 }
 
 .model3safety .safety_buttons p {
-    margin: auto;
+    margin: auto 5px;
 }
 /* SAFETY COMPONENT END */
 /* SAFETY ANIMATIONS */
@@ -508,7 +514,7 @@
 
 /* ORDER COMPONENT END */
 /* MEDIA QUERIES */
-@media (max-width: 1268px) {
+@media (max-width: 1200px) {
     .specs_content_buttons {
         grid-template-columns: 200px 200px !important;
     }

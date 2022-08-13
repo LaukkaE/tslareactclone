@@ -7,6 +7,7 @@ import background from '../../pics/modely/modelyawd.jpg';
 const ModelYAWD = () => {
     const [acceleration, setAcceleration] = useState(0);
 
+    // useEffect to animate acceleration while inside viewport
     useEffect(() => {
         let interval;
         const accDiv = document.querySelector('.modely_awd_acceleration');

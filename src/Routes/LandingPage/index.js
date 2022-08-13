@@ -5,7 +5,7 @@ import {
     // animateScroll as scroll,
     scroller,
 } from 'react-scroll';
-import { useScrollDirection } from '../../utils/useScrollDirection';
+import { useScrollDirection } from '../../hooks/useScrollDirection';
 import Model3 from './Model3';
 import ModelS from './ModelS';
 import ModelX from './ModelX';
@@ -26,7 +26,6 @@ const Landingpage = () => {
 
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
-        // console.log('execute');
         let offsetY = window.scrollY;
         if (scrollDirection === 'up' && offsetY < window.innerHeight) {
             scroller.scrollTo('modelyElement', { smooth: true });
@@ -82,7 +81,6 @@ const Landingpage = () => {
     return (
         <div
             className="landing"
-            // onClick={() => asd()}
             onWheel={(e) => handleScroll(e)}
             onTouchMove={(e) => handleScroll(e)}
         >
