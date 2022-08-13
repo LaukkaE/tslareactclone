@@ -1,0 +1,24 @@
+.footer {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    width: 100%;
+    transform: translateY(-250%);
+}
+
+.footer ul li {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.footer ul {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    flex-direction: row;
+}
+
+.footer p {
+    font-size: 14px;
+}

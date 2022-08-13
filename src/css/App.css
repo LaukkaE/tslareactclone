@@ -15,3 +15,87 @@
     background-position: center center;
     background-size: cover;
 }
+
+@keyframes fadeInUpv2 {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeInUpv2 {
+    from {
+        transform: translate3d(0, 40px, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+        opacity: 1 !important;
+    }
+}
+
+/* COMMON */
+.horizontal_wrapper {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-rows: 1fr 220px;
+}
+.vertical_wrapper_left {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-columns: 420px 1fr;
+}
+.vertical_wrapper_right {
+    height: max(600px, 100vh);
+    display: grid;
+    grid-template-columns: 1fr 420px;
+}
+
+.vertical_content {
+    margin-left: 2rem;
+    margin-top: 5rem;
+    margin-right: 1rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.horizontal_content {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    max-width: 1100px;
+    height: 100%;
+    margin: auto;
+    padding-top: 3rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.toggleable {
+    opacity: 0;
+}
+
+.animate {
+    animation-duration: 1s;
+    animation-fill-mode: both;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-fill-mode: both;
+    animation-name: fadeInUpv2;
+    -webkit-animation-name: fadeInUpv2;
+}
+
+.background_panels_1 {
+    animation-delay: 0ms;
+}
+.background_panels_2 {
+    animation-delay: 125ms;
+}
+.background_panels_3 {
+    animation-delay: 250ms;
+}
+.background_panels_4 {
+    animation-delay: 375ms;
+}

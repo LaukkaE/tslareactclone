@@ -9,6 +9,7 @@ import NotImplementedModal from './components/NotImplementedModal';
 import { useState } from 'react';
 import { ModalContext } from './utils/ModalContext';
 import ModelY from './Routes/ModelY';
+import Footer from './components/Footer';
 
 function App() {
     const [notImplementedOpen, setNotImplementedOpen] = useState(false);
@@ -23,6 +24,7 @@ function App() {
                                 <>
                                     <Navbar />
                                     <Landingpage />
+                                    <Footer />
                                 </>
                             }
                         ></Route>
@@ -41,6 +43,7 @@ function App() {
                                 <>
                                     <Navbar color="white" mode="absolute" />
                                     <Model3 />
+                                    <Footer />
                                 </>
                             }
                         ></Route>
@@ -50,6 +53,7 @@ function App() {
                                 <>
                                     <Navbar color="white" mode="absolute" />
                                     <ModelY />
+                                    <Footer />
                                 </>
                             }
                         ></Route>

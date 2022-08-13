@@ -20,7 +20,7 @@ const ModelYSafetyMobile = () => {
                         ></Button>
                     </div>
                 </div>
-                <div className="safety_content_right">
+                <div className="safety_content_right toggleable">
                     <p>
                         Lorem ipsum, dolor sit amet consectetur adipisicing
                         elit. Perferendis nihil soluta ea corporis voluptatum,
