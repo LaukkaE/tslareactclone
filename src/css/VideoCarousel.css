@@ -1,0 +1,45 @@
+.videocarousel {
+    display: flex;
+    margin-top: 100px;
+    flex-direction: column;
+    color: white;
+}
+
+.video_container {
+    display: flex;
+    width: 100%;
+}
+#videocarousel-video {
+    width: min(1400px, 95vh);
+    height: 638px;
+    margin: auto;
+    border-radius: 25px;
+}
+
+.video_text_container {
+    margin: auto;
+    margin-top: 50px;
+    width: 700px;
+}
+.video_text_container h2 {
+    margin-bottom: 20px;
+}
+
+.video_button {
+    height: 15px;
+    width: 15px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    display: inline-block;
+}
+.video_buttons ul .active {
+    background-color: white;
+}
+
+.video_buttons ul {
+    padding-left: 0;
+    margin-bottom: 10px;
+}
+.video_buttons ul li {
+    margin: 0 4px;
+}

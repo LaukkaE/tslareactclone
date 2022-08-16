@@ -32,7 +32,7 @@ function App() {
                             path="/models"
                             element={
                                 <>
-                                    {/* <Navbar /> */}
+                                    <Navbar mode="absolute"  />
                                     <ModelS />
                                 </>
                             }
