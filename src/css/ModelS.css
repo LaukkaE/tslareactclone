@@ -47,6 +47,9 @@
     display: flex;
     flex-direction: column;
 }
+.modelsinterior .videocarousel {
+    margin-top: 100px;
+}
 .modelsinterior .introtext {
     height: 200px;
     display: flex;
@@ -55,4 +58,10 @@
 }
 .modelsinterior .introtext h1 {
     margin: auto;
+}
+
+.modelsinterior .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
 }

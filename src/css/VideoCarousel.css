@@ -1,6 +1,5 @@
 .videocarousel {
     display: flex;
-    margin-top: 100px;
     flex-direction: column;
     color: white;
 }
@@ -11,7 +10,7 @@
 }
 #videocarousel-video {
     width: min(1400px, 95vh);
-    height: 638px;
+    height: 640px;
     margin: auto;
     border-radius: 25px;
 }

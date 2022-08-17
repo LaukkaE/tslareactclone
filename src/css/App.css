@@ -78,6 +78,36 @@
     opacity: 0;
 }
 
+.card_container {
+    display: flex;
+    max-width: 1100px;
+    height: 300px;
+    margin: auto;
+}
+.card {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+.card h3 {
+    margin-top: 100px;
+    margin-bottom: 10px;
+}
+.card_text {
+    width: 80%;
+}
+.card_right .card_text {
+    margin-left: auto;
+}
+
+.card img,
+.card video {
+    max-height: 300px;
+    max-width: 100%;
+    object-fit: cover;
+}
 .animate {
     animation-duration: 1s;
     animation-fill-mode: both;

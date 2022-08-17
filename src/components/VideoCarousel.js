@@ -10,7 +10,7 @@ import { useRef } from 'react';
 const VideoCarousel = () => {
     const [activeVideo, setActiveVideo] = useState(1);
     const [videoInfo, setVideoInfo] = useState({});
-    const videoRef = useRef();
+    const videoRef = useRef(null);
 
     useEffect(() => {
         if (activeVideo === 1) {
