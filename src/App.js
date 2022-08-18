@@ -32,8 +32,9 @@ function App() {
                             path="/models"
                             element={
                                 <>
-                                    <Navbar mode="absolute"  />
+                                    <Navbar mode="absolute" />
                                     <ModelS />
+                                    <Footer color="black" mode="absolute" />
                                 </>
                             }
                         ></Route>

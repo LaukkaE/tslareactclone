@@ -1,5 +1,3 @@
-
-
 /* MAIN COMPONENT */
 .modelymain .introtext {
     font-size: 40px;
@@ -164,10 +162,7 @@
     /* Hacky transform to get panels over video */
     transform: translateY(-200%);
 }
-.modelyrange .background {
-    /* height: 100vh; */
-    /* display: flex; */
-}
+
 .modelyrange .background_panels_info {
     text-align: center;
     font-size: 24px;
