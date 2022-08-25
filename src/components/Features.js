@@ -1,6 +1,7 @@
 import React, { useRef, useState } from 'react';
 import { useEffect } from 'react';
 import '../css/Features.css';
+import { useIntersectionObs } from '../hooks/useIntersectionObs';
 import route1 from '../pics/features/features1.mp4';
 import route2 from '../pics/features/features2.mp4';
 import route3 from '../pics/features/features3.mp4';
@@ -9,6 +10,7 @@ import route4 from '../pics/features/features4.mp4';
 const Features = () => {
     const [activeFeature, setActiveFeature] = useState(1);
     const videoRef = useRef(null);
+    useIntersectionObs('.toggleable');
 
     const features = {
         1: {
@@ -51,7 +53,7 @@ const Features = () => {
 
     return (
         <div className="features">
-            <div className="upper_text">
+            <div className="upper_text toggleable">
                 <h1>Features</h1>
                 <p>
                     Lorem ipsum, dolor sit amet consectetur adipisicing elit.

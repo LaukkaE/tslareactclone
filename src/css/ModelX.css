@@ -219,3 +219,26 @@
 .modelxrange .range_content_buttons p {
     margin: auto 5px;
 }
+/* SAFETY */
+.modelxsafety .background {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.modelxsafety .safety_content p {
+    margin-top: 1rem;
+    line-height: 1.5;
+}
+
+.modelxsafety .safety_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+
+.modelxsafety .safety_buttons {
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+}

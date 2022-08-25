@@ -11,6 +11,10 @@ import ModelXExterior from './ModelXExterior';
 import ModelXRangeMobile from './mobile/ModelXRangeMobile';
 import ModelXRange from './ModelXRange';
 import Travel from '../../components/Travel';
+import ModelXSafetyMobile from './mobile/ModelXSafetyMobile';
+import ModelXSafety from './ModelXSafety';
+import Features from '../../components/Features';
+import Autopilot from '../../components/Autopilot';
 
 const ModelX = () => {
     const mobileMode = useMobileMode();
@@ -26,9 +30,9 @@ const ModelX = () => {
             <ModelXExterior />
             {mobileMode ? <ModelXRangeMobile /> : <ModelXRange />}
             <Travel />
-            {/* {mobileMode ? <ModelXSafetyMobile /> : <ModelXSafety />} */}
-            {/* <Autopilot /> */}
-            {/* <Features /> */}
+            {mobileMode ? <ModelXSafetyMobile /> : <ModelXSafety />}
+            <Autopilot />
+            <Features />
             {/* <ModelXSpecs /> */}
             {/* <ModelXOrder /> */}
         </div>
