@@ -1,0 +1,221 @@
+/* MAIN */
+.modelxmain_background {
+    height: max(600px, 100vh);
+    display: flex;
+    justify-content: center;
+}
+
+.modelxmain .background {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 1) 100%,
+        rgba(233, 233, 233, 1) 100%
+    );
+}
+
+.modelxmain .introtext {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    margin-top: 15vh;
+    font-weight: bold;
+}
+.modelxmain .introtext h1 {
+    font-size: 40px;
+}
+
+.modelxmain .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    max-width: 1000px;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    /* transform: translateX(-25%); */
+}
+
+.modelxmain .background_panels p,
+.modelxmain .background_panels h1 {
+    color: white;
+    text-align: center;
+}
+/* INTERIOR */
+.modelxinterior {
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+}
+.modelxinterior .videocarousel {
+    margin-top: 100px;
+}
+.modelxinterior .introtext {
+    height: 200px;
+    display: flex;
+    color: white;
+    white-space: nowrap;
+}
+.modelxinterior .introtext h1 {
+    margin: auto;
+}
+
+.modelxinterior .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+/* PERFORMANCE */
+.modelxperformance .background {
+    display: flex;
+}
+.modelxperformance .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    gap: 10rem;
+    /* transform: translateX(-25%); */
+    color: white;
+}
+.modelxperformance .background_panels_info {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.modelxperformance .background_panels_text {
+    text-align: center;
+}
+.modelxperformance .performance_content_left_buttons {
+    margin-top: 20px;
+}
+/* UTILITY COMPONENT */
+.modelxutility .background {
+    display: flex;
+}
+
+.modelxutility .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    gap: 10rem;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.modelxutility .background_panels_info {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.modelxutility .background_panels_text {
+    text-align: center;
+}
+
+.modelxutility .utility_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+.modelxutility .utility_content_text p {
+    line-height: 1.5;
+}
+
+.modelxutility .utility_content_buttons {
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+}
+
+.modelxutility .utility_content_buttons p {
+    margin: auto 5px;
+}
+/* EXTERIOR */
+.modelxexterior {
+    background-color: black;
+}
+.modelxexterior .exterior_upper {
+    background-color: white;
+}
+.modelxexterior .background {
+    display: flex;
+}
+.modelxexterior .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.modelxexterior .background_panels_info {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.modelxexterior .background_panels_text {
+    text-align: center;
+}
+
+.modelxexterior .exterior_content h2 {
+    margin-bottom: 30px;
+}
+
+.modelxexterior .cards {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+    padding-bottom: 100px;
+}
+/* RANGE */
+.modelxrange .background {
+    display: flex;
+}
+
+.modelxrange .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+    max-width: 900px;
+    margin: 0 auto;
+    margin-top: auto;
+    margin-bottom: 4rem;
+    color: white;
+}
+
+.modelxrange .background_panels_info {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+.modelxrange .background_panels_text {
+    text-align: center;
+}
+
+.modelxrange .range_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+.modelxrange .range_content_text p {
+    line-height: 1.5;
+}
+
+.modelxrange .range_content_buttons {
+    margin-bottom: 2.5rem;
+    margin-top: auto;
+}
+
+.modelxrange .range_content_buttons p {
+    margin: auto 5px;
+}

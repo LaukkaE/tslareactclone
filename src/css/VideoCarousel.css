@@ -7,12 +7,15 @@
 .video_container {
     display: flex;
     width: 100%;
+    height: 640px;
 }
-#videocarousel-video {
+#videocarousel-video,
+#imagecarousel-img {
     width: min(1400px, 95vh);
     height: 640px;
     margin: auto;
     border-radius: 25px;
+    /* z-index: 5; */
 }
 
 .video_text_container {

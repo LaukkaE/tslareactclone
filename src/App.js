@@ -10,6 +10,7 @@ import { useState } from 'react';
 import { ModalContext } from './utils/ModalContext';
 import ModelY from './Routes/ModelY';
 import Footer from './components/Footer';
+import ModelX from './Routes/ModelX';
 
 function App() {
     const [notImplementedOpen, setNotImplementedOpen] = useState(false);
@@ -55,6 +56,16 @@ function App() {
                                     <Navbar color="white" mode="absolute" />
                                     <ModelY />
                                     <Footer />
+                                </>
+                            }
+                        ></Route>
+                        <Route
+                            path="/modelx"
+                            element={
+                                <>
+                                    <Navbar color="black" mode="absolute" />
+                                    <ModelX />
+                                    {/* <Footer /> */}
                                 </>
                             }
                         ></Route>

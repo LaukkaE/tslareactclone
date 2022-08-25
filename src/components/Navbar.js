@@ -33,10 +33,10 @@ const Navbar = ({ color = 'black', mode = 'fixed' }) => {
                                 <p>Model 3</p>
                             </Link>
                         </li>
-                        <li onClick={() => setModal(true)}>
-                            {/* <Link to="/modelx"> */}
-                            <p>Model X</p>
-                            {/* </Link> */}
+                        <li>
+                            <Link to="/modelx">
+                                <p>Model X</p>
+                            </Link>
                         </li>
                         <li>
                             <Link to="/modely">
