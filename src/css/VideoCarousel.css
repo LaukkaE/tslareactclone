@@ -45,3 +45,6 @@
 .video_buttons ul li {
     margin: 0 4px;
 }
+.video_buttons ul li:hover {
+    cursor: pointer;
+}

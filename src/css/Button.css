@@ -10,6 +10,15 @@
     /* overflow: hidden; */
     /* text-overflow: ellipsis; */
 }
+.button_size_stretch {
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    border: none;
+    white-space: nowrap;
+}
 .button_size_thin {
     border-radius: 20px;
     width: 250px;

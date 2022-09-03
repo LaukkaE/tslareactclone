@@ -15,6 +15,8 @@ import ModelXSafetyMobile from './mobile/ModelXSafetyMobile';
 import ModelXSafety from './ModelXSafety';
 import Features from '../../components/Features';
 import Autopilot from '../../components/Autopilot';
+import ModelXSpecs from './ModelXSpecs';
+import ModelXOrder from './ModelXOrder';
 
 const ModelX = () => {
     const mobileMode = useMobileMode();
@@ -33,8 +35,8 @@ const ModelX = () => {
             {mobileMode ? <ModelXSafetyMobile /> : <ModelXSafety />}
             <Autopilot />
             <Features />
-            {/* <ModelXSpecs /> */}
-            {/* <ModelXOrder /> */}
+            <ModelXSpecs />
+            <ModelXOrder />
         </div>
     );
 };

@@ -242,3 +242,148 @@
     margin-bottom: 2.5rem;
     white-space: nowrap;
 }
+/* SPECS */
+.modelxspecs {
+    background-color: #000;
+    min-height: max(100vh, 600px);
+}
+.modelxspecs .specs_wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10rem;
+    position: relative;
+}
+.modelxspecs .background {
+    background-size: max(300px, 100%);
+    /* background-position: 0 28vh; */
+    position: relative;
+    top: 15%;
+    /* bottom: 15vh; */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.modelxspecs .specs_content {
+    margin-top: 28vh;
+    max-height: 100%;
+}
+
+.modelxspecs .specs_content_buttons {
+    display: grid;
+    grid-template-columns: 250px 250px;
+    grid-template-rows: auto auto;
+    column-gap: 0px;
+}
+
+.modelxspecs h2 {
+    color: white;
+    margin-bottom: 2rem;
+}
+.modelxspecs .specs_content_items hr {
+    width: 35px;
+    opacity: 0.5;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+.modelxspecs .specs_content_items h4 {
+    color: white;
+    margin-bottom: 5px;
+}
+.modelxspecs .specs_content_items p {
+    color: #c0c0c0;
+    white-space: pre-wrap;
+}
+
+.modelxspecs .specs_content_items {
+    margin-top: 15px;
+    display: grid;
+    grid-template-rows: repeat(6, 80px);
+    grid-template-columns: 250px 250px;
+    grid-template-areas:
+        'a g'
+        'b h'
+        'c h'
+        'd i'
+        'e j'
+        'f k'
+        '. l';
+}
+
+#a {
+    grid-area: a;
+}
+#b {
+    grid-area: b;
+}
+#c {
+    grid-area: c;
+}
+#d {
+    grid-area: d;
+}
+#e {
+    grid-area: e;
+}
+#f {
+    grid-area: f;
+}
+#g {
+    grid-area: g;
+}
+#h {
+    grid-area: h;
+}
+#i {
+    grid-area: i;
+}
+#i {
+    grid-area: i;
+}
+#j {
+    grid-area: j;
+}
+#k {
+    grid-area: k;
+}
+/* ORDER */
+.modelxorder {
+    height: 100vh;
+    background-color: #fff;
+    display: flex;
+}
+.modelxorder .order_wrapper {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+
+    height: 400px;
+    max-width: 1900px;
+    margin: auto 0;
+    margin-left: auto;
+
+    gap: 10rem;
+    flex-grow: 1;
+}
+
+.modelxorder .background {
+    background-size: 100%;
+    width: auto;
+    max-height: 100%;
+}
+.modelxorder .order_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 5rem;
+    /* align-items: left; */
+    /* width: auto; */
+}
+.modelxorder .order_content_buttons {
+    margin-top: 2rem;
+    display: flex;
+    gap: 1.5rem;
+}
+.modelxorder h2 {
+    color: black;
+    font-size: 30px;
+}

@@ -1,8 +1,8 @@
 import React from 'react';
 import '../css/Button.css';
 
-// Modes: dark, light, white, transparent
-// Sizes: large, small, round
+// Modes: dark, light, white, transparent, specs
+// Sizes: large, small, round, thin, stretch
 
 const Button = ({
     mode = 'white',

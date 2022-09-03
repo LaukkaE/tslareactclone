@@ -1,0 +1,93 @@
+/* MAIN */
+.chargingmain_background {
+    height: max(600px, 100vh);
+    display: flex;
+    justify-content: center;
+}
+
+.chargingmain .background {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 0%,
+        rgba(255, 255, 255, 1) 100%,
+        rgba(233, 233, 233, 1) 100%
+    );
+}
+
+.chargingmain .introtext {
+    margin: auto;
+    position: absolute;
+    text-align: center;
+    margin-top: 15vh;
+    font-weight: bold;
+}
+.chargingmain .introtext h1 {
+    font-size: 40px;
+}
+
+.chargingmain .background_panels {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    max-width: 600px;
+    margin-top: auto;
+    margin-bottom: 2rem;
+    gap: 2rem;
+    /* transform: translateX(-25%); */
+}
+
+.chargingmain .background_panels p,
+.chargingmain .background_panels h1 {
+    color: black;
+    text-align: center;
+}
+/* SUPERCHARGER */
+.chargingsupercharger .chargingsupercharger_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+.chargingsupercharger .chargingsupercharger_content_text p {
+    line-height: 1.5;
+}
+
+.chargingsupercharger .chargingsupercharger_content_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    gap: 0.5rem;
+}
+
+.chargingsupercharger .chargingsupercharger_content_buttons p {
+    margin: auto 5px;
+}
+
+/* HOME */
+.charginghome .charginghome_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+.charginghome .charginghome_content_text p {
+    line-height: 1.5;
+}
+/* DESTINATION */
+.chargingdestination .chargingdestination_content_text h2 {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-size: 28px;
+}
+.chargingdestination .chargingdestination_content_text p {
+    line-height: 1.5;
+}
+
+.chargingdestination .chargingdestination_content_buttons {
+    display: flex;
+    flex-direction: column;
+    margin-top: auto;
+    margin-bottom: 2.5rem;
+    white-space: nowrap;
+    gap: 0.5rem;
+}
