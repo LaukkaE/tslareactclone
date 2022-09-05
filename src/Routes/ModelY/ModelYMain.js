@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
 import { ModalContext } from '../../utils/ModalContext';
-import background from '../../pics/modely/modelymain.jpg';
+import background from '../../pics/modely/modelymain.avif';
 
 const ModelYMain = () => {
     const setModal = useContext(ModalContext);

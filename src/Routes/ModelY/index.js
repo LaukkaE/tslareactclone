@@ -1,4 +1,3 @@
-import React, { useEffect } from 'react';
 import Autopilot from '../../components/Autopilot';
 import Interior from '../../components/Interior';
 import '../../css/ModelY.css';

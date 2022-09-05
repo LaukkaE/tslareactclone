@@ -74,8 +74,9 @@ function App() {
                             path="/charging"
                             element={
                                 <>
-                                    {/* <Navbar color="black" mode="absolute" /> */}
+                                    <Navbar color="black" mode="absolute" />
                                     <Charging />
+                                    <Footer color="black" mode="absolute" />
                                 </>
                             }
                         ></Route>

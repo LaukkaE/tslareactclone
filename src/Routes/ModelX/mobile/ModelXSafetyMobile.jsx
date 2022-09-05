@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../../components/Button';
-import background from '../../../pics/modelx/modelxsafety.jpg';
+import background from '../../../pics/modelx/modelxsafety.avif';
 const ModelXSafetyMobile = () => {
     return (
         <div className={`modelxsafety horizontal_wrapper`}>

@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../../components/Button';
-import background from '..//../pics/models/modelsexterior.jpg';
-import card1 from '../../pics/models/exteriorcard1.jpg';
-import card2 from '../../pics/models/exteriorcard2.jpg';
-import card3 from '../../pics/models/exteriorcard3.jpg';
+import background from '..//../pics/models/modelsexterior.avif';
+import card1 from '../../pics/models/exteriorcard1.avif';
+import card2 from '../../pics/models/exteriorcard2.avif';
+import card3 from '../../pics/models/exteriorcard3.avif';
 
 const ModelSExterior = () => {
     return (

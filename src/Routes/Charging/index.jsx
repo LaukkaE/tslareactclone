@@ -1,6 +1,5 @@
 import React from 'react';
 import DataDisclaimer from '../../components/DataDisclaimer';
-import Footer from '../../components/Footer';
 import '../../css/Charging.css';
 import { useIntersectionObs } from '../../hooks/useIntersectionObs';
 import { useMobileMode } from '../../hooks/useMobileMode';
@@ -29,7 +28,6 @@ const Charging = () => {
                 <ChargingDestination />
             )}
             <DataDisclaimer />
-            <Footer color="black" mode="absolute" />
         </div>
     );
 };

@@ -1,8 +1,8 @@
 import React from 'react';
-import background from '../../pics/models/modelsinterior.jpg';
-import card1 from '../../pics/modelx/interiorcard1.jpg';
-import card2 from '../../pics/modelx/interiorcard2.jpg';
-import card3 from '../../pics/modelx/interiorcard3.jpg';
+import background from '../../pics/models/modelsinterior.avif';
+import card1 from '../../pics/modelx/interiorcard1.avif';
+import card2 from '../../pics/modelx/interiorcard2.avif';
+import card3 from '../../pics/modelx/interiorcard3.avif';
 import ImageCarousel from '../../components/ImageCarousel';
 
 const ModelXInterior = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import background from '../../pics/Desktop-SolarPanels.jpg';
+import background from '../../pics/landingpage/solar.avif';
 import MainPageActiveElement from './MainPageActiveElement';
 
 const Solar = ({ active }) => {

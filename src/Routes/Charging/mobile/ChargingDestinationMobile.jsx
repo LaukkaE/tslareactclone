@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ModalContext } from '../../../utils/ModalContext';
-import background from '../../../pics/Charging/chargingdestination.jpg';
+import background from '../../../pics/Charging/chargingdestination.avif';
 import Button from '../../../components/Button';
 
 const ChargingDestinationMobile = () => {
@@ -31,15 +31,15 @@ const ChargingDestinationMobile = () => {
                         />
                     </div>
                 </div>
-                    <div className="chargingdestination_content_right">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Perspiciatis sapiente est, corrupti velit
-                            error inventore consectetur itaque dolorem, ullam
-                            ratione, expedita labore dolores sunt. Fugiat dolor
-                            ipsum enim? Quos, natus!
-                        </p>
-                    </div>
+                <div className="chargingdestination_content_right">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Perspiciatis sapiente est, corrupti velit error
+                        inventore consectetur itaque dolorem, ullam ratione,
+                        expedita labore dolores sunt. Fugiat dolor ipsum enim?
+                        Quos, natus!
+                    </p>
+                </div>
             </div>
         </div>
     );

@@ -1,7 +1,7 @@
 .features {
     display: flex;
     flex-direction: column;
-    height: max(400px, 80vh);
+    height: max(1100px, 80vh);
 }
 
 .features .upper_text {

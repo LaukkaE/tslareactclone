@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/modelx/modelxutility.jpg';
+import background from '../../pics/modelx/modelxutility.avif';
 import { ModalContext } from '../../utils/ModalContext';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDove } from '@fortawesome/free-solid-svg-icons';

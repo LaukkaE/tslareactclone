@@ -2,7 +2,7 @@ import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useEffect, useState } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/modely/modelyawd.jpg';
+import background from '../../pics/modely/modelyawd.avif';
 
 const ModelYAWD = () => {
     const [acceleration, setAcceleration] = useState(0);

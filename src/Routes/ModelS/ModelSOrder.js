@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/models/modelsorder.jpg';
+import background from '../../pics/models/modelsorder.avif';
 import { ModalContext } from '../../utils/ModalContext';
 
 const ModelSOrder = () => {

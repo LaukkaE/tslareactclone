@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/modelx/modelxspecs.jpg';
+import background from '../../pics/modelx/modelxspecs.avif';
 
 const ModelXSpecs = () => {
     const [activeButton, setActiveButton] = useState('plaid');

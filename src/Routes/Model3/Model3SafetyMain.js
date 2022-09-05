@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../../pics/model3/model3safety.jpg';
+import background from '../../pics/model3/model3safety.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar, faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';

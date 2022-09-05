@@ -2,14 +2,19 @@ import { faCloudShowersHeavy } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/model3/model3awd.jpg';
+import background from '../../pics/model3/model3awd.avif';
+import mobilebackground from '../../pics/model3/model3awdmobile.avif';
 
-const Model3AWD = ({ active }) => {
+const Model3AWD = ({ mobile }) => {
     return (
         <div className={`model3awd horizontal_wrapper`}>
             <div
                 className="background"
-                style={{ backgroundImage: `url(${background})` }}
+                style={{
+                    backgroundImage: `url(${
+                        mobile ? mobilebackground : background
+                    })`,
+                }}
             >
                 <div className="background_panels">
                     <div className="background_panels_1 toggleable">

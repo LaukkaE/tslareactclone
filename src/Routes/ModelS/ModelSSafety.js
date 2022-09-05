@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/models/modelssafety.jpg';
+import background from '../../pics/models/modelssafety.avif';
 const ModelSSafety = () => {
     return (
         <div className={`modelssafety vertical_wrapper_left`}>

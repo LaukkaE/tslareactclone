@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import Button from '../../../components/Button';
-import background from '../../../pics/modelx/modelxrange.jpg';
+import background from '../../../pics/modelx/modelxrange.avif';
 import { ModalContext } from '../../../utils/ModalContext';
 
 const ModelXRangeMobile = () => {

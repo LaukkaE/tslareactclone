@@ -67,20 +67,20 @@
 }
 
 /* Change to mobile backgrounds */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 1200px) {
     .model3 {
-        background-image: url('../pics/Mobile-model_3.jpg') !important;
+        background-image: url('../pics/landingpage/model3mobile.avif') !important;
     }
     .models {
-        background-image: url('../pics/Homepage-Model-S-Mobile-LHD.jpg') !important;
+        background-image: url('../pics/landingpage/modelsmobile.avif') !important;
     }
     .modelx {
-        background-image: url('../pics/Homepage-Model-X-Mobile-LHD.jpg') !important;
+        background-image: url('../pics/landingpage/modelxmobile.avif') !important;
     }
     .modely {
-        background-image: url('../pics/Mobile-ModelY.jpg') !important;
+        background-image: url('../pics/landingpage/modelymobile.avif') !important;
     }
     .solar {
-        background-image: url('../pics/Mobile-SolarPanels.jpg') !important;
+        background-image: url('../pics/landingpage/solarmobile.avif') !important;
     }
 } ;

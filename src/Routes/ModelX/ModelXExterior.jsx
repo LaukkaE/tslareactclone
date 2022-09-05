@@ -1,9 +1,9 @@
 import React from 'react';
 import Button from '../../components/Button';
-import background from '..//../pics/modelx/modelxexterior.jpg';
-import card1 from '../../pics/modelx/exteriorcard1.jpg';
-import card2 from '../../pics/modelx/exteriorcard2.jpg';
-import card3 from '../../pics/modelx/exteriorcard3.jpg';
+import background from '..//../pics/modelx/modelxexterior.avif';
+import card1 from '../../pics/modelx/exteriorcard1.avif';
+import card2 from '../../pics/modelx/exteriorcard2.avif';
+import card3 from '../../pics/modelx/exteriorcard3.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCarSide, faJetFighter } from '@fortawesome/free-solid-svg-icons';
 

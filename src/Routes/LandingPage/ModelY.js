@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../../pics/Desktop-ModelY.jpg';
+import background from '../../pics/landingpage/modely.avif';
 import MainPageActiveElement from './MainPageActiveElement';
 import { CSSTransition } from 'react-transition-group';
 

@@ -139,10 +139,10 @@ const Model3 = () => {
                 <Model3Safety mobile={mobileMode} />
             </Element>
             <Element name="model3performance">
-                <Model3Performance />
+                <Model3Performance mobile={mobileMode} />
             </Element>
             <Element name="model3awd">
-                <Model3AWD />
+                <Model3AWD mobile={mobileMode} />
             </Element>
             <Element name="model3range">
                 <Model3Range mobile={mobileMode} />

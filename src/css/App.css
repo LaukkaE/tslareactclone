@@ -94,12 +94,14 @@
     /* position: relative; */
 }
 .card h3 {
-    margin-top: 100px;
+    /* margin-top: 100px; */
     margin-bottom: 10px;
 }
 .card_text {
-    width: 80%;
+    margin: auto;
+    width: max(200px, 80%);
 }
+
 .card_right .card_text {
     margin-left: auto;
 }

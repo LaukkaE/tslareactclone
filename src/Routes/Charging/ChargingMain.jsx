@@ -1,4 +1,4 @@
-import background from '../../pics/Charging/chargingmain.jpg';
+import background from '../../pics/Charging/chargingmain.avif';
 
 const ChargingMain = () => {
     return (

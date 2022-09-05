@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import background from '../../pics/desktop_model_3_v2.jpg';
+import background from '../../pics/landingpage/model3.avif';
 import MainPageActiveElement from './MainPageActiveElement';
 
 const Model3 = ({ active }) => {

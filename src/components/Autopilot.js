@@ -2,7 +2,7 @@ import { faCamera, faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import Button from './Button';
-import background from '../../src/pics/model3/model3autopilot.jpg';
+import background from '../../src/pics/autopilot/autopilot.avif';
 import { ModalContext } from '../utils/ModalContext';
 import '../css/Autopilot.css';
 

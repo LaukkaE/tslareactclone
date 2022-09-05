@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/modelx/modelxsafety.jpg';
+import background from '../../pics/modelx/modelxsafety.avif';
 const ModelXSafety = () => {
     return (
         <div className={`modelxsafety vertical_wrapper_left`}>

@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
 import '../css/Powertrain.css';
-import models from '../pics/powertrain/models.jpg';
-import modelsplaid from '../pics/powertrain/modelsplaid.jpg';
-import modelx from '../pics/powertrain/modelx.jpg';
-import modelxplaid from '../pics/powertrain/modelxplaid.jpg';
+import models from '../pics/powertrain/models.avif';
+import modelsplaid from '../pics/powertrain/modelsplaid.avif';
+import modelx from '../pics/powertrain/modelx.avif';
+import modelxplaid from '../pics/powertrain/modelxplaid.avif';
 
 const Powertrain = ({ model = 'models' }) => {
     const [activeSide, setActiveSide] = useState('left');

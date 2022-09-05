@@ -6,7 +6,7 @@ import {
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React, { useContext } from 'react';
 import Button from './Button';
-import background from '../../src/pics/model3/model3interior.jpg';
+import background from '../../src/pics/interior/model3interior.avif';
 import { ModalContext } from '../utils/ModalContext';
 import '../css/Interior.css';
 

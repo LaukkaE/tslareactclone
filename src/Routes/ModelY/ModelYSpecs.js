@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Button from '../../components/Button';
-import background from '../../pics/model3/model3specs.jpg';
+import background from '../../pics/model3/model3specs.avif';
 import { ModalContext } from '../../utils/ModalContext';
 
 const ModelYSpecs = () => {

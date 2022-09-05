@@ -1,18 +1,23 @@
 import React, { useContext } from 'react';
-import background from '../../pics/model3/model3performance.jpg';
+import background from '../../pics/model3/model3performance.avif';
+import mobilebackground from '../../pics/model3/model3performancemobile.avif';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import Button from '../../components/Button';
 import { ModalContext } from '../../utils/ModalContext';
 
-const Model3Performance = ({ active }) => {
+const Model3Performance = ({ mobile }) => {
     const setModal = useContext(ModalContext);
 
     return (
         <div className={`model3performance horizontal_wrapper`}>
             <div
                 className="background"
-                style={{ backgroundImage: `url(${background})` }}
+                style={{
+                    backgroundImage: `url(${
+                        mobile ? mobilebackground : background
+                    })`,
+                }}
             >
                 <div className="background_panels">
                     <div className="background_panels_1 toggleable">

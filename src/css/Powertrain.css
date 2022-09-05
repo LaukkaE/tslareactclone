@@ -1,7 +1,7 @@
 .powertrain {
     display: flex;
     flex-direction: column;
-    height: max(600px, 100vh);
+    height: max(1100px, 100vh);
     overflow-y: hidden;
     background-color: #f4f4f4;
 }
@@ -30,7 +30,7 @@
 
 .powertrain_content {
     height: 250px;
-    width: 1200px;
+    max-width: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;

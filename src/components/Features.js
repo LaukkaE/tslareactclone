@@ -43,7 +43,7 @@ const Features = () => {
         if (vidnumber != null) {
             setActiveFeature(vidnumber);
         } else {
-            if (activeFeature < 4) {
+            if (activeFeature < features.length) {
                 setActiveFeature((prev) => prev + 1);
             } else {
                 setActiveFeature(1);

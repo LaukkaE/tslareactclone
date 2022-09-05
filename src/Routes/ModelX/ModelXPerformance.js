@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import background from '../../pics/modelx/modelxperformance.jpg';
+import background from '../../pics/modelx/modelxperformance.avif';
 
 import Button from '../../components/Button';
 import { ModalContext } from '../../utils/ModalContext';

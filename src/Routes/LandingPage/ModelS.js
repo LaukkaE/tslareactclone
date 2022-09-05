@@ -1,6 +1,6 @@
 import React from 'react';
 import { CSSTransition } from 'react-transition-group';
-import background from '../../pics/ms-homepage-desktop.jpg';
+import background from '../../pics/landingpage/models.avif';
 import MainPageActiveElement from './MainPageActiveElement';
 
 const ModelS = ({ active }) => {

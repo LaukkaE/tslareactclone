@@ -1,6 +1,6 @@
 import React, { useContext } from 'react';
 import { ModalContext } from '../../utils/ModalContext';
-import background from '../../pics/Charging/chargingdestination.jpg';
+import background from '../../pics/Charging/chargingdestination.avif';
 import Button from '../../components/Button';
 
 const ChargingDestination = () => {
