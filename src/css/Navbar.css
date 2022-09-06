@@ -33,24 +33,35 @@
 
 .navbar ul li p {
     padding: 5px 10px;
-    /* transition: 1000ms ease-in-out; */
     font-size: 1rem;
     font-weight: 600;
 }
 .navbar ul li:hover {
-    border-radius: 10px;
     cursor: pointer;
-    transition: 250ms ease-in-out;
 }
-.color_black ul li:hover {
+.color_black .hover_overlay {
     background-color: rgba(000, 000, 000, 0.08);
 }
+.color_white .hover_overlay {
+    background-color: rgb(255, 255, 255, 0.15);
+}
+.navbar .hover_overlay {
+    position: absolute;
+    border-radius: 5px;
+    z-index: -100;
+    opacity: 0;
+    translate: 0 -25%;
+    transition: 0.3s ease left, width, opacity 0.6s;
+    /* transition: opacity 2s; */
+}
+.navbar .hover_overlay.hovered {
+    opacity: 1;
+}
+
 .color_black ul li p {
     color: black;
 }
-.color_white ul li:hover {
-    background-color: rgb(255, 255, 255, 0.15);
-}
+
 .color_white ul li p {
     color: white;
 }

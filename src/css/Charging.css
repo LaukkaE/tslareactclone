@@ -78,6 +78,7 @@
     margin-top: 0.5rem;
     margin-bottom: 1rem;
     font-size: 28px;
+    white-space: nowrap;
 }
 .chargingdestination .chargingdestination_content_text p {
     line-height: 1.5;
