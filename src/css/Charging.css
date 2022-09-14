@@ -35,11 +35,13 @@
     gap: 2rem;
     /* transform: translateX(-25%); */
 }
+.chargingmain .background_panels {
+    text-align: center;
+}
 
 .chargingmain .background_panels p,
 .chargingmain .background_panels h1 {
     color: black;
-    text-align: center;
 }
 /* SUPERCHARGER */
 .chargingsupercharger .chargingsupercharger_content_text h2 {

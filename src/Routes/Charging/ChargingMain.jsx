@@ -1,4 +1,6 @@
 import background from '../../pics/Charging/chargingmain.avif';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBoltLightning } from '@fortawesome/free-solid-svg-icons';
 
 const ChargingMain = () => {
     return (
@@ -11,7 +13,11 @@ const ChargingMain = () => {
             </div>
             <div className="background_panels">
                 <div className="background_panels_1 toggleable">
-                    <h1>salamakuva</h1>
+                    <FontAwesomeIcon
+                        icon={faBoltLightning}
+                        style={{ marginBottom: '5px' }}
+                        size="2x"
+                    />
                     <p>Charge at Home</p>
                 </div>
                 <div className="background_panels_2 toggleable">

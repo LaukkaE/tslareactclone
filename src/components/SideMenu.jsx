@@ -31,34 +31,25 @@ const SideMenu = ({ active, setOpenMenu }) => {
                     {!moreMenu ? (
                         <>
                             {' '}
-                            <li
-                                className="sidemenu_mobile"
-                                onClick={() => setModal(true)}
-                            >
-                                {/* <Link to="/models"> */}
-                                <p>Model S</p>
-                                {/* </Link> */}
+                            <li className="sidemenu_mobile">
+                                <Link to="/models">
+                                    <p>Model S</p>
+                                </Link>
                             </li>
                             <li className="sidemenu_mobile">
                                 <Link to="/model3">
                                     <p>Model 3</p>
                                 </Link>
                             </li>
-                            <li
-                                className="sidemenu_mobile"
-                                onClick={() => setModal(true)}
-                            >
-                                {/* <Link to="/modelx"> */}
-                                <p>Model X</p>
-                                {/* </Link> */}
+                            <li className="sidemenu_mobile">
+                                <Link to="/modelx">
+                                    <p>Model X</p>
+                                </Link>
                             </li>
-                            <li
-                                className="sidemenu_mobile"
-                                onClick={() => setModal(true)}
-                            >
-                                {/* <Link to="/modely"> */}
-                                <p>Model Y</p>
-                                {/* </Link> */}
+                            <li className="sidemenu_mobile">
+                                <Link to="/modely">
+                                    <p>Model Y</p>
+                                </Link>
                             </li>
                             <li
                                 className="sidemenu_mobile"
@@ -86,13 +77,10 @@ const SideMenu = ({ active, setOpenMenu }) => {
                                 <p>Utilities</p>
                                 {/* </Link> */}
                             </li>
-                            <li
-                                className="sidemenu_mobile"
-                                onClick={() => setModal(true)}
-                            >
-                                {/* <Link to="/utilities"> */}
-                                <p>Charging</p>
-                                {/* </Link> */}
+                            <li className="sidemenu_mobile">
+                                <Link to="/charging">
+                                    <p>Charging</p>
+                                </Link>
                             </li>
                             <li onClick={() => setModal(true)}>
                                 {/* <Link to="/energy"> */}
