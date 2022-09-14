@@ -1,6 +1,3 @@
-import React, { useContext } from 'react';
-
-import { ModalContext } from '../../utils/ModalContext';
 import ModelYRangeMain from './ModelYRangeMain';
 import ModelYRangeMobile from './ModelYRangeMobile';
 

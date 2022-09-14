@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import '../css/Navbar.css';
 import teslaLogo from '../pics/teslalogo.svg';
-import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import SideMenu from './SideMenu';
 import { ModalContext } from '../utils/ModalContext';
 
