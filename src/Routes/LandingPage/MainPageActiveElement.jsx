@@ -23,7 +23,7 @@ const MainPageActiveElement = ({ elementName, active }) => {
         <>
             <p className="intro_text">{introText()}</p>
             <div className="buttons">
-                <Link to={`/${elementName}/design`}>
+                <Link to={`/${elementName}/`}>
                     <Button mode="dark" text="CUSTOM ORDER" />
                 </Link>
                 {elementName !== 'solar' && (
