@@ -18,7 +18,7 @@ const Solar = ({ active }) => {
                 classNames="active"
             >
                 <div className="active">
-                    <MainPageActiveElement elementName={'solar'} />
+                    <MainPageActiveElement elementName={'charging'} />
                 </div>
             </CSSTransition>
         </div>

@@ -26,7 +26,7 @@ const MainPageActiveElement = ({ elementName, active }) => {
                 <Link to={`/${elementName}/`}>
                     <Button mode="dark" text="CUSTOM ORDER" />
                 </Link>
-                {elementName !== 'solar' && (
+                {elementName !== 'charging' && (
                     <Link to={`/${elementName}/`}>
                         <Button mode="light" text="LEARN MORE" />
                     </Link>

@@ -59,7 +59,7 @@ const Landingpage = () => {
             offsetY >= window.innerHeight * 3
         ) {
             scroller.scrollTo('solarElement', { smooth: true });
-            setActiveElement('solar');
+            setActiveElement('charging');
         } else {
             console.log('foo');
         }
@@ -97,7 +97,7 @@ const Landingpage = () => {
                 <ModelX active={activeElement === 'modelx' ? true : false} />
             </Element>
             <Element name="solarElement">
-                <Solar active={activeElement === 'solar' ? true : false} />
+                <Solar active={activeElement === 'charging' ? true : false} />
             </Element>
         </div>
     );
