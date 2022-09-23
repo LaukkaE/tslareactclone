@@ -12,7 +12,7 @@ const MainPageActiveElement = ({ elementName, active }) => {
             return 'Model S';
         } else if (elementName === 'modelx') {
             return 'Model X';
-        } else if (elementName === 'solar') {
+        } else if (elementName === 'charging') {
             return 'Solar';
         } else {
             return null;

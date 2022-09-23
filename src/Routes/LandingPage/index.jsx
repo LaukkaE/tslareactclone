@@ -24,11 +24,19 @@ const Landingpage = () => {
         setActiveElement('modely');
     }, []);
 
+    const scrollerScrollFunction = (locationToScroll) => {
+        scroller.scrollTo(locationToScroll, {
+            smooth: true,
+            ignoreCancelEvents: true,
+            duration: 300,
+        });
+    };
+
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;
         if (scrollDirection === 'up' && offsetY < window.innerHeight) {
-            scroller.scrollTo('modelyElement', { smooth: true });
+            scrollerScrollFunction('modelyElement');
             setActiveElement('modely');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight) ||
@@ -36,7 +44,7 @@ const Landingpage = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 2)
         ) {
-            scroller.scrollTo('model3Element', { smooth: true });
+            scrollerScrollFunction('model3Element');
             setActiveElement('model3');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 2) ||
@@ -44,7 +52,7 @@ const Landingpage = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 3)
         ) {
-            scroller.scrollTo('modelsElement', { smooth: true });
+            scrollerScrollFunction('modelsElement');
             setActiveElement('models');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 3) ||
@@ -52,13 +60,13 @@ const Landingpage = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 4)
         ) {
-            scroller.scrollTo('modelxElement', { smooth: true });
+            scrollerScrollFunction('modelxElement');
             setActiveElement('modelx');
         } else if (
             scrollDirection === 'down' &&
             offsetY >= window.innerHeight * 3
         ) {
-            scroller.scrollTo('solarElement', { smooth: true });
+            scrollerScrollFunction('solarElement');
             setActiveElement('charging');
         } else {
             console.log('foo');
@@ -66,13 +74,12 @@ const Landingpage = () => {
         // console.log(scrollDir, offsetY, window.innerHeight);
     };
 
-    // chrome scrolling style, firefox scrolling is done differently on teslas own site.
     let timeout = useRef(null);
     const handleScroll = () => {
         clearTimeout(timeout.current);
         timeout.current = setTimeout(() => {
             executeScroll();
-        }, 600);
+        }, 150);
     };
     useEffect(() => {
         scrollRef.current = scrollDir;

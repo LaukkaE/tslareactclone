@@ -38,11 +38,19 @@ const Model3 = () => {
         setActiveElement('model3main');
     }, []);
 
+    const scrollerScrollFunction = (locationToScroll) => {
+        scroller.scrollTo(locationToScroll, {
+            smooth: true,
+            ignoreCancelEvents: true,
+            duration: 300,
+        });
+    };
+
     const executeScroll = () => {
         let scrollDirection = scrollRef.current;
         let offsetY = window.scrollY;
         if (scrollDirection === 'up' && offsetY < window.innerHeight) {
-            scroller.scrollTo('model3main', { smooth: true });
+            scrollerScrollFunction('model3main');
             setActiveElement('model3main');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight) ||
@@ -50,7 +58,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 2)
         ) {
-            scroller.scrollTo('model3safety', { smooth: true });
+            scrollerScrollFunction('model3safety');
             setActiveElement('model3safety');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 2) ||
@@ -58,7 +66,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 3)
         ) {
-            scroller.scrollTo('model3performance', { smooth: true });
+            scrollerScrollFunction('model3performance');
             setActiveElement('model3performance');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 3) ||
@@ -66,7 +74,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 4)
         ) {
-            scroller.scrollTo('model3awd', { smooth: true });
+            scrollerScrollFunction('model3awd');
             setActiveElement('model3awd');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 4) ||
@@ -74,7 +82,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 5)
         ) {
-            scroller.scrollTo('model3range', { smooth: true });
+            scrollerScrollFunction('model3range');
             setActiveElement('model3range');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 5) ||
@@ -82,7 +90,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 6)
         ) {
-            scroller.scrollTo('model3autopilot', { smooth: true });
+            scrollerScrollFunction('model3autopilot');
             setActiveElement('model3autopilot');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 6) ||
@@ -90,7 +98,7 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 7)
         ) {
-            scroller.scrollTo('model3interior', { smooth: true });
+            scrollerScrollFunction('model3interior');
             setActiveElement('model3interior');
         } else if (
             (scrollDirection === 'down' && offsetY <= window.innerHeight * 7) ||
@@ -98,10 +106,10 @@ const Model3 = () => {
                 offsetY >= window.innerHeight &&
                 offsetY <= window.innerHeight * 8)
         ) {
-            scroller.scrollTo('model3specs', { smooth: true });
+            scrollerScrollFunction('model3specs');
             setActiveElement('model3specs');
         } else if (scrollDirection === 'down') {
-            scroller.scrollTo('model3order', { smooth: true });
+            scrollerScrollFunction('model3order');
             setActiveElement('model3order');
         } else {
             console.log('foo');
@@ -114,7 +122,7 @@ const Model3 = () => {
         clearTimeout(timeout.current);
         timeout.current = setTimeout(() => {
             executeScroll();
-        }, 600);
+        }, 150);
     };
     useEffect(() => {
         scrollRef.current = scrollDir;
