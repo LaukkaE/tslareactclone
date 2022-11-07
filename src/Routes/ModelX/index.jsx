@@ -17,11 +17,17 @@ import Features from '../../components/Features';
 import Autopilot from '../../components/Autopilot';
 import ModelXSpecs from './ModelXSpecs';
 import ModelXOrder from './ModelXOrder';
+import { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 
 const ModelX = () => {
     const mobileMode = useMobileMode();
     useIntersectionObs('.toggleable', mobileMode);
 
+    // force to the start of the page on page switch/load
+    useEffect(() => {
+        scroller.scrollTo('modelxmain');
+    }, []);
     return (
         <div className="modelxcomponent">
             <ModelXMain />

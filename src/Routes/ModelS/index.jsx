@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Autopilot from '../../components/Autopilot';
 import Powertrain from '../../components/Powertrain';
 import Travel from '../../components/Travel';
@@ -16,10 +16,16 @@ import ModelSSafety from './ModelSSafety';
 import Features from '../../components/Features';
 import ModelSSpecs from './ModelSSpecs';
 import ModelSOrder from './ModelSOrder';
+import { scroller } from 'react-scroll';
 
 const ModelS = () => {
     const mobileMode = useMobileMode();
     useIntersectionObs('.toggleable', mobileMode);
+
+    // force to the start of the page on page switch/load
+    useEffect(() => {
+        scroller.scrollTo('modelsmain');
+    }, []);
 
     return (
         <div className="modelscomponent">

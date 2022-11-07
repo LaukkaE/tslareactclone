@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import { scroller } from 'react-scroll';
 import DataDisclaimer from '../../components/DataDisclaimer';
 import '../../css/Charging.css';
 import { useIntersectionObs } from '../../hooks/useIntersectionObs';
@@ -13,6 +14,11 @@ import ChargingSuperchargerMobile from './mobile/ChargingSuperchargerMobile';
 const Charging = () => {
     const mobileMode = useMobileMode();
     useIntersectionObs('.toggleable', mobileMode);
+
+    // force to the start of the page on page switch/load
+    useEffect(() => {
+        scroller.scrollTo('chargingmain');
+    }, []);
     return (
         <div className="chargingcomponent">
             <ChargingMain />
